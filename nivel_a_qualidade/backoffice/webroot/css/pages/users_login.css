@@ -1,0 +1,49 @@
+form {
+    clear: both;
+    left: 50%;
+    margin-left: -200px;
+    margin-right: 0px;
+    padding: 0;
+    position: relative;
+    width: 340px;
+}
+
+#content h2 {
+    display: inline-block;
+    left: 50%;
+    margin-left: -195px;
+    margin-right: 0;
+    position: relative;
+    width: 340px;
+}
+div.actions {
+    clear: both;
+    float: none;
+    left: 50%;
+    margin-left: -200px;
+    margin-right: 0;
+    padding: 5px 6px;
+    position: relative;
+    width: 340px;
+}
+a.remember {
+    clear: both;
+    display: inline-block;
+    left: auto;
+    margin-left: auto;
+    margin-right: 102px;
+    padding: 4px;
+    position: inherit;
+    width: auto;   
+}
+a.register {
+    clear: both;
+    display: inline-block;
+    left: auto;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 4px;
+    position: inherit;
+    width: auto;  
+    margin-top: 30px;
+}
