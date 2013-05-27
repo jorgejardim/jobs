@@ -1,0 +1,119 @@
+body {
+    background-color: #fff;
+}
+#header {
+    background: url("../img/header.gif") repeat-x scroll 0 0 #D9D9D9;
+}
+#header .logo {
+    height: 55px;
+}
+#header h1 {
+    background: url("../img/logo.gif") no-repeat scroll 0 5px transparent;
+    float: left;
+    height: 55px;
+    line-height: 50px;
+    margin: 0;
+    width: 105px;
+}
+#header h2 {
+    background: none repeat scroll 0 0 transparent;
+    color: #666666;
+    float: left;
+    font-size: 12px;
+    height: 55px;
+    line-height: 69px;
+    margin: 0;
+    padding-left: 14px;
+    width: 146px;
+}
+#header a {
+    color: #666666;
+    font-size: 10px;
+    font-weight: normal;
+    text-decoration: none;
+}
+#menu {
+    background: none repeat scroll 0 0 #FFA040;
+    height: 20px;
+    padding: 4px;
+}
+#menu ul li {
+    float: left;
+    list-style: none;
+}
+#menu ul li:hover {
+    background-color: #f93;    
+}
+#menu ul li a {
+    border-left: 2px solid #FFB66F;
+    color: #FFFFFF;
+    display: block;
+    margin-top: -3px;
+    padding: 3px 5px;
+    text-decoration: none;
+}
+#menu ul li a:hover, #menu ul li a.selecionado {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #FFB66F;  
+}
+#menu ul, #menu li {
+    margin: 0 0px;
+}
+#menu-home {
+    padding: 24px 27px;
+}
+#menu-home ul {
+}
+#menu-home ul li {
+    padding: 6px;
+}
+
+
+form.filtros {
+    border: 1px solid #E4E4E4;
+    display: block;
+    height: 22px;
+    margin-bottom: 16px;
+    padding: 10px;
+    width: 98%;
+}
+ul.filtros {
+    display: block;
+    font-weight: bold;
+}
+ul.filtros li {
+    float: left;
+    list-style: none;
+}
+ul.filtros li.enviar {
+    width: 34px;
+}
+ul.filtros .trecho {
+    width: 235px;
+}
+ul.filtros .status-cv {
+    width: 155px;
+}
+ul.filtros .cursos {
+    width: 255px;
+}
+ul.filtros input[type="submit"] {
+    margin-top: -4px;
+    width: 34px;
+}
+ul.filtros select {
+    border: 1px solid #E4E4E4;
+    font-size: 12px;
+    height: 20px;
+    width: 100px;
+}
+ul.filtros input[type="text"] {
+    border: 1px solid #E4E4E4;
+    font-size: 12px;
+    height: 14px;
+    width: 170px;
+}
+ul.filtros .cursos select {
+    width: 203px;
+}

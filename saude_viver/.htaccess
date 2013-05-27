@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    #WWW    
+    RewriteCond %{HTTP_HOST} !^localhost
+    RewriteCond %{HTTP_HOST} !^www\.
+    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+    #www.jorgejardim.com.br
+    RewriteCond %{HTTP_HOST} ^www\.jorgejardim\.com\.br [NC]
+    RewriteCond %{REQUEST_URI} !^/jorge
+    RewriteRule (.*) /jorge/$1 [L]
+
+    #www.saudeviver.com.br
+    RewriteCond %{REQUEST_URI} !^/jorge
+    RewriteRule    ^$    webroot/    [L]
+    RewriteCond %{REQUEST_URI} !^/jorge
+    RewriteRule    (.*) webroot/$1    [L]
+
+ </IfModule>

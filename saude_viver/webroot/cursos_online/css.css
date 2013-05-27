@@ -1,0 +1,79 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #ffffff;
+	margin: 0px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+input {
+	border: 1px solid #464946;
+}
+
+textarea {
+	border: 1px solid #464946;
+}
+
+.logon {
+	margin-top: 50px;
+}
+
+.logon td {
+	padding: 2px;
+	border: 1px solid #464946;
+}
+
+.table-titulo {
+	font-weight: bold;
+	background-color: #BBE0E3;
+}
+
+.logon td {
+	background-color: #BBE0E3;
+}
+
+.table-erro {
+	color:#CC0000;
+}
+
+.table-ok {
+	color:#006600;
+}
+
+.menu td {
+	padding: 2px;
+	border: 1px solid #464946;
+	background-color: #C6C9C6;
+}
+
+.menu a {
+	color: #000000;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+.menu a:hover {
+	color: #FF9900;
+}
+
+.form td {
+	padding: 2px;
+	border: 1px solid #464946;
+	background-color: #C6C9C6;
+}
+
+.form a {
+	color: #0066FF;
+	text-decoration:none;
+}
+
+.form a:hover {
+	color: #FF9900;
+}
