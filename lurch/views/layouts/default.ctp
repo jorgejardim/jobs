@@ -23,7 +23,11 @@
             SEF: <?php echo $title_for_layout; ?>
         </title>
         <?php
-        echo $this->Html->meta('icon')."\n";
+        echo $this->Html->meta(
+            'favicon.png',
+            'favicon.png',
+            array('type' => 'icon')
+        );
         echo $this->Html->charset()."\n"; 
         echo $this->Html->css('cake.generic')."\n";
         echo $this->Html->css('ui/jquery-ui-1.10.0.custom.min')."\n";
