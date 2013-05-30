@@ -16,7 +16,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */ 
 if(!preg_match("/www/i", $_SERVER['HTTP_HOST']) && !preg_match("/localhost/i", $_SERVER['HTTP_HOST'])) {
-    //header("Location: http://www.".$_SERVER['HTTP_HOST']."/sistema/");
+    header("Location: http://www.".$_SERVER['HTTP_HOST']."/");
 }
 
 require 'webroot' . DIRECTORY_SEPARATOR . 'index.php';
