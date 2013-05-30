@@ -50,10 +50,25 @@ class PagesController extends AppController {
             $title_for_layout = Inflector::humanize($path[$count - 1]);
         }
         $this->set(compact('page', 'subpage', 'title_for_layout'));
+        $this->_page_title($page);
         $this->render(implode('/', $path));
     }
 
     function admin_index() {
 
+    }
+    
+    private function _page_title($page) {
+        
+        $title['home']                   = 'Confirmação de Presença';
+        $title['quem-somos']             = 'Quem Somos';
+        $title['administrar-evento']     = 'Administrar Evento';
+        $title['como-funciona']          = 'Como Funciona?';
+        $title['incluir-convidados']     = 'Incluir Convidades';
+        $title['incluir-evento']         = 'Incluir Evento';  
+        
+        if(isset($title[$page])) {
+            $this->set('title_for_layout', $title[$page]);
+        }
     }
 }

@@ -5,13 +5,13 @@
     </head>
     <body>
         <div style="margin:30px;font-family:Helvetica, Arial, sans-serif;font-size:14px">
-            <div style="border-bottom:1px solid #ccc;margin-bottom:25px;padding-bottom:17px"><img border="0" src="<?php echo $html->url('/img/logo.jpg', true); ?>"></div>
+            <div style="border-bottom:1px solid #ccc;margin-bottom:25px;padding-bottom:17px"><img border="0" src="<?php echo $html->url('/img/site/images/logo-lurch.png', true); ?>"></div>
             <?php echo $content_for_layout; ?>
             <div style="color:#999;padding-top:30px;padding-bottom:20px"> 
-                <strong>Equipe do Sistema</strong>
+                <strong>Equipe Lurch</strong>
                 <font color="#888888">
                     <br>
-                    <a target="_blank" style="color:#F60" href="mailto:jorge.testes@gmail.com">jorge.testes@gmail.com</a> 
+                    <a target="_blank" style="color:#F60" href="mailto:contato@lurch.com.br">contato@lurch.com.br</a> 
                 </font>
             </div>
         </div>

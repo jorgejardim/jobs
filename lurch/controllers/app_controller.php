@@ -60,6 +60,7 @@ class AppController extends Controller {
         'Paginator',
         'AclCaching.AclHtml',
         'Jmenu.Tree',
+        'Estados',
     );
   
     /**
@@ -155,7 +156,7 @@ class AppController extends Controller {
             'controller' => 'home',
             'action'     => 'index',
             'plugin'     => false,            
-            'admin'      => false
+            'admin'      => true
         );
         $this->Auth->logoutRedirect = array(
             'controller' => 'users',
@@ -184,7 +185,7 @@ class AppController extends Controller {
         * LIBERAR TUDO
         * Descomente a chamada dos metodos forceAllow para liberar os acessos
         */
-        if($_SERVER['HTTP_HOST']=='localhost') {
+        if($_SERVER['HTTP_HOST']=='localhostXXX') {
             // Libera acesso para localhost
             $this->AclCaching->forceAllow();
             if(!USER_ID && $this->params['controller']!='users') {
@@ -192,10 +193,10 @@ class AppController extends Controller {
             }
         } elseif (isset($this->params['admin'])) {
             // Libera acesso para actions com o prefixo admin
-            //$this->AclCaching->forceAllow();
+            $this->AclCaching->forceAllow();
         } else {
             // Libera acesso para actions sem o prefixo admin
-            //$this->AclCaching->forceAllow();
+            $this->AclCaching->forceAllow();
         }
     }
 }

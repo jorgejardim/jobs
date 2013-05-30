@@ -33,8 +33,8 @@ class EstadosHelper extends AppHelper {
  * @param array $attributes Mesmos atributos do Form::select(). Também é possível passar o param
 				'uf' para mostrar apenas as siglas, sem os nomes
  */
-	function select($fieldName, $selected = null, $attributes = array()) {
-		App::import('Vendor', 'CakePtbr.Estados');
+	function select($fieldName, $attributes = array()) {
+		App::import('Vendor', 'Estados');
 		$options = Estados::lista();
 		if (isset($attributes['uf']) && $attributes['uf'] === true) {
 			$estados = array_keys($options);
@@ -44,6 +44,17 @@ class EstadosHelper extends AppHelper {
 		if (!isset($attributes['empty'])) {
 			$attributes['empty'] = false;
 		}
-		return $this->Form->select($fieldName, $options, $selected, $attributes);
+
+                $attr = array(
+                        'options'=>$options,
+                        'class'=>'estado',
+                        'type'=>'select'
+                    );
+                
+                if(!empty($attributes)) {
+                    $attr = array_merge($attr, $attributes);
+                }
+                
+                return $this->Form->input($fieldName, $attr);
 	}
 }

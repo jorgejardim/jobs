@@ -21,6 +21,7 @@ class UsersController extends AppController {
      * @access public
      */
     function login() {
+        $this->set('title_for_layout', 'Login');
         $this->logout(true); 
     }
 
@@ -242,6 +243,7 @@ class UsersController extends AppController {
     function remember_password() {
 
         $this->set('css_for_layout', 'pages/users_login');
+        $this->set('title_for_layout', 'Lembrar Minha Senha');
         
         if (!empty($this->data)) {
 

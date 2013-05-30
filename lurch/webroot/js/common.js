@@ -45,25 +45,6 @@ $(document).ready(function() {
     $(".number_prodesp").mask("999.999.999",{placeholder:''});
     
     /*
-    * Letras maiusculas
-    */
-    $('input, textarea').blur(function() {
-        if(this.id!='UserEmail' && 
-           this.id!='UserPassword' &&
-           this.id!='MenuName' &&
-           this.id!='MenuLink' &&
-           $(this).attr('type')!='submit' &&
-           $(this).attr('type')!='button' &&
-           $(this).attr('class')!='reference' &&
-           $(this).attr('class')!='email' &&
-           $(this).attr('class')!='password' &&
-           $(this).attr('class')!='no-upper' &&
-           $(this).attr('class')!='user') {
-            this.value = this.value.toUpperCase();
-        }
-    });
-    
-    /*
     * DatePicker
     */  
     $.datepicker.regional['pt'] = {
@@ -118,6 +99,7 @@ $(document).ready(function() {
                     $(".bairro").val(unescape(resultadoCEP["bairro"]));  
                     $(".cidade").val(unescape(resultadoCEP["cidade"]));  
                     $(".estado").val(unescape(resultadoCEP["uf"]));
+                    $(".numero").focus();
                 }
                 $('.loading-cep').hide();
             });
@@ -210,6 +192,35 @@ $(document).ready(function() {
     $('.checkbox_all').click(function () {
         $('.list').find(':checkbox').attr('checked', this.checked);
     });
+    
+    /*
+    * CKEDITOR
+    */
+    var ckeditor = {
+        filebrowserBrowseUrl      : www+'webroot/js/kcfinder/browse.php?type=files',
+        filebrowserImageBrowseUrl : www+'webroot/js/kcfinder/browse.php?type=images',
+        filebrowserFlashBrowseUrl : www+'webroot/js/kcfinder/browse.php?type=flash',
+        filebrowserUploadUrl      : www+'webroot/js/kcfinder/upload.php?type=files',
+        filebrowserImageUploadUrl : www+'webroot/js/kcfinder/upload.php?type=images',
+        filebrowserFlashUploadUrl : www+'webroot/js/kcfinder/upload.php?type=flash',
+        language : 'pt-BR',
+        forcePasteAsPlainText : true,
+        disableReadonlyStyling : true,
+        font_defaultLabel : 'Verdana',
+        font_names : 'Verdana',
+        height: '100px',
+        toolbar :
+        [
+            { name: 'styles', items : [ 'Styles','Format','FontSize' ] },
+            { name: 'colors', items : [ 'TextColor','BGColor' ] },
+            { name: 'insert', items : [ 'Image','Table','HorizontalRule','Smiley','SpecialChar' ] },
+            { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+            '/',
+            { name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+            { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ] }
+        ]
+    };
+    $( '.ckeditor' ).ckeditor( ckeditor );
 });
 
 /*

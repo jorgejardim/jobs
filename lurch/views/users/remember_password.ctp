@@ -1,4 +1,4 @@
-<h2>Lembrar Senha</h2>
+<div class="site-form">
 <?php if(!isset($ok)) { ?>
     <?php
     echo $this->Form->create(
@@ -21,3 +21,4 @@
             <p>Abra sua caixa de entrada para conferir a sua senha.</p>            
     <?php echo $this->Form->end(null); ?>
 <?php } ?>
+</div>

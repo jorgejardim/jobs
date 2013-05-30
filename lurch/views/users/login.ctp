@@ -1,4 +1,4 @@
-<h2>Login</h2>
+<div class="site-form">
 <?php
 echo $this->Form->create(
         'User',
@@ -13,9 +13,10 @@ echo $this->Form->input('email');
 echo $this->Form->input('password',array('type'=>'password'));
 echo $this->Form->end('Login');
 ?>
+</div>
 <div class="actions">
     <?php
     echo $this->Html->link('Esqueceu a sua senha?', '/users/remember_password', array('class'=>'remember'));
-    echo $this->Html->link('Cadastre-se', '/users/register', array('class'=>'register')); 
+    //echo $this->Html->link('Cadastre-se', '/users/register', array('class'=>'register')); 
     ?>
 </div>
