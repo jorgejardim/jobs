@@ -37,7 +37,7 @@
                     <td class="text-center"><?php echo $status[$convidado['Convidado']['status']]; ?>&nbsp;</td>
                     <td class="actions">
                         <?php echo $this->Html->link($this->Html->image('icons/icon-view.png', array(
-                                                    'alt' => 'Visualizar', 'title' => 'Visualizar')
+                                                    'alt' => 'Visualizar', 'title' => 'Visualizar', 'class' => 'tooltip')
                                                ), array(
                                                     'controller' => 'convidados',
                                                     'action' => 'view',
@@ -46,7 +46,7 @@
                                                     'escape' => false,
                                                )); ?>
                         <?php echo $this->Html->link($this->Html->image('icons/icon-edit.png', array(
-                                                        'alt' => 'Editar', 'title' => 'Editar')
+                                                        'alt' => 'Editar', 'title' => 'Editar', 'class' => 'tooltip')
                                                 ), array(
                                                         'controller' => 'convidados',
                                                         'action' => 'edit',
@@ -56,7 +56,7 @@
                                                         'escape' => false,
                                                 )); ?>
                         <?php echo $this->Html->link($this->Html->image('icons/icon-mail.png', array(
-                                                        'alt' => 'Enviar Convite por E-mail', 'title' => 'Enviar Convite por E-mail')
+                                                        'alt' => 'Enviar Convite por E-mail', 'title' => 'Enviar Convite por E-mail', 'class' => 'tooltip')
                                                 ), array(
                                                         'controller' => 'convidados',
                                                         'action' => 'email',
@@ -66,7 +66,7 @@
                                                         'escape' => false,
                                                 )); ?>
                         <?php echo $this->Html->link($this->Html->image('icons/icon-delete.png', array(
-                                                        'alt' => 'Excluir', 'title' => 'Excluir')
+                                                        'alt' => 'Excluir', 'title' => 'Excluir', 'class' => 'tooltip')
                                                 ), array(
                                                         'controller' => 'convidados',
                                                         'action' => 'delete',

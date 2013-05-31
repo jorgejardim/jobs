@@ -2,6 +2,7 @@
     width: 400px;
 }
 div.convidados {
+    display: inline-block;
     width: 710px;
 }
 .site-form legend {

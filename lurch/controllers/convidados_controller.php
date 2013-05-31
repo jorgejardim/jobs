@@ -144,9 +144,9 @@ class ConvidadosController extends AppController {
     }
     
     private function _status() {
-        $status[0] = '<span style="color:#F90;" title="Aguardando Confirmação">Aguardando</span>';
-        $status[1] = '<span style="color:#06F;" title="Convidado Confirmado">Confirmado</span>';
-        $status[2] = '<span style="color:#F00;" title="Convidado não Confirmado">Não Vai</span>';
+        $status[0] = '<span style="color:#F90;" title="Aguardando Confirmação" class="tooltip">Aguardando</span>';
+        $status[1] = '<span style="color:#06F;" title="Convidado Confirmado" class="tooltip">Confirmado</span>';
+        $status[2] = '<span style="color:#F00;" title="Convidado não Confirmado" class="tooltip">Não Vai</span>';
         $this->set('status', $status);
     }
 }

@@ -175,14 +175,9 @@ $(document).ready(function() {
     setInterval('maintain_session_open()',120000);
     
     /*
-    * HTML TO PDF
-    */
-    $("#report_content").val( $(".report").html() );
-    
-    /*
     * TOOLTIP
     */
-    $('.menu-tabela.pdf button').tooltip({
+    $('.tooltip').tooltip({
         track: true
     });
     

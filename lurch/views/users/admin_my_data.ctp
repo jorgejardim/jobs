@@ -1,4 +1,4 @@
-<div class="users div-centro">
+<div class="users div-centro site-form">
     <?php echo $this->Form->create('User', array('type' => 'file', 'url' => '/'.$this->params['url']['url'])); ?>
     <fieldset>
         <legend>Meus Dados</legend>
@@ -42,12 +42,6 @@
         echo $this->Form->input('UsersAddress.neighborhood', array('class'=>'bairro'));
         echo $this->Form->input('UsersAddress.city', array('class'=>'cidade'));
         echo $this->Form->input('UsersAddress.state', array('class'=>'estado'));
-        ?>
-
-        <legend><?php __('Foto'); ?></legend>
-        <?php
-        echo $this->Commons->foto(null, @$this->data['User']['id']);
-        echo $this->Form->input('Arquivo.avatar', array('label' => 'Foto', 'type' => 'file'));
         ?>
 
     </fieldset>

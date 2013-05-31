@@ -45,7 +45,7 @@ class UsersController extends AppController {
      *
      * @access public
      */
-    function my_data() {
+    function admin_my_data() {
         
         //salva usuario
         $this->save($this->data, USER_ID);
@@ -58,6 +58,7 @@ class UsersController extends AppController {
         $this->User->recursive = 0;
         $this->users = $this->paginate();
         $this->set('users', $this->users);
+        $this->set('title_for_layout', 'Usuários');
     }
 
     function admin_view($id = null) {
@@ -100,6 +101,7 @@ class UsersController extends AppController {
         }
         
         $this->set('user', $this->data);
+        $this->set('title_for_layout', 'Usuário');
     }
 
     function admin_add() {
@@ -114,6 +116,7 @@ class UsersController extends AppController {
             $this->groups = $this->User->Group->find('list');          
             $this->set('groups',$this->groups);
         }
+        $this->set('title_for_layout', 'Adicionar Usuário');
     }
 
     function admin_edit($id = null) {
@@ -135,6 +138,7 @@ class UsersController extends AppController {
         }
         $this->groups = $this->User->Group->find('list'); 
         $this->set('groups',$this->groups);
+        $this->set('title_for_layout', 'Editar Usuário');
     }
 
     function admin_delete($id = null, $redirect=true) {

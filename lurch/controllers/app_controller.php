@@ -176,6 +176,7 @@ class AppController extends Controller {
         }
         
         // Constantes
+        define('ADM', $this->Session->read('Auth.Group.adm'));
         define('USER_ID', $this->Session->read('Auth.User.id'));
         define('USER_NAME', $this->Session->read('Auth.User.name'));
         define('GROUP_ID', $this->Session->read('Auth.Group.id'));

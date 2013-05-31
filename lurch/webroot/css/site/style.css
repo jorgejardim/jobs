@@ -158,6 +158,7 @@ a:hover{
 	font-size:13px;
 	line-height:18px;
 	color:#666666;
+        min-height: 300px;
 }
 
 #footer{
@@ -2812,7 +2813,7 @@ a.project-category-title:hover{
 }
 
 .site-form {
-    display:inline-block;
+/*    display:inline-block;*/
 }
 
 .site-form form {
@@ -2998,4 +2999,28 @@ html .cke_skin_kama {
 }
 
 
-
+/*ADMIN*/
+table.admin-table.actions {
+    margin-top: -23px;
+}
+tr.actions {
+}
+tr.actions td {
+    border: 0 none;
+    padding: 0;
+    text-align: right;
+}
+tr.actions td ul {
+    display: inline-block;
+    margin: 0 0 -6px;
+    padding: 0 !important;
+}
+tr.actions td ul li {
+    float: left;
+    margin: 0 10px;
+    padding: 0 !important;
+}
+tr.actions td ul li a {
+}
+tr.actions td ul li a:hover {
+}

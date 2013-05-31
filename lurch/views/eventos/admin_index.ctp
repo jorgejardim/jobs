@@ -25,7 +25,7 @@
                 <td class="text-center"><?php echo $status[$evento['Evento']['status']]; ?>&nbsp;</td>
                 <td class="actions">
                     <?php echo $this->Html->link($this->Html->image('icons/icon-view.png', array(
-                                                    'alt' => 'Visualizar', 'title' => 'Visualizar')
+                                                    'alt' => 'Visualizar', 'title' => 'Visualizar', 'class' => 'tooltip')
                                                ), array(
                                                     'controller' => 'eventos',
                                                     'action' => 'view',
@@ -34,7 +34,7 @@
                                                     'escape' => false,
                                                )); ?>
                     <?php echo $this->Html->link($this->Html->image('icons/icon-edit.png', array(
-                                                    'alt' => 'Editar', 'title' => 'Editar')
+                                                    'alt' => 'Editar', 'title' => 'Editar', 'class' => 'tooltip')
                                                ), array(
                                                     'controller' => 'eventos',
                                                     'action' => 'edit',
@@ -43,7 +43,7 @@
                                                     'escape' => false,
                                                )); ?>
                     <?php echo $this->Html->link($this->Html->image('icons/icon-people.png', array(
-                                                    'alt' => 'Convidados', 'title' => 'Convidados')
+                                                    'alt' => 'Convidados', 'title' => 'Convidados', 'class' => 'tooltip')
                                                ), array(
                                                     'controller' => 'convidados',
                                                     'action' => 'add',
@@ -52,7 +52,7 @@
                                                     'escape' => false,
                                                )); ?>
                     <?php echo $this->Html->link($this->Html->image('icons/icon-delete.png', array(
-                                                    'alt' => 'Excluir', 'title' => 'Excluir')
+                                                    'alt' => 'Excluir', 'title' => 'Excluir', 'class' => 'tooltip')
                                                ), array(
                                                     'controller' => 'eventos',
                                                     'action' => 'delete',
