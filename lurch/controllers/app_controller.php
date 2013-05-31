@@ -194,7 +194,7 @@ class AppController extends Controller {
             }
         } elseif (isset($this->params['admin'])) {
             // Libera acesso para actions com o prefixo admin
-            $this->AclCaching->forceAllow();
+            // $this->AclCaching->forceAllow();
         } else {
             // Libera acesso para actions sem o prefixo admin
             $this->AclCaching->forceAllow();
