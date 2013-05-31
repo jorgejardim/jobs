@@ -260,6 +260,7 @@ class UsersController extends AppController {
                 $this->set('email', $data['User']['email']);
                 $this->set('password', $data['User']['password']);
                 $this->set('code', $data['User']['activation_code']);
+                //$this->Email->delivery = 'debug';
                 $this->Email->send();
                 
                 $this->set('ok', true);                      

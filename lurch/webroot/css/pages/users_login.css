@@ -1,3 +1,7 @@
+.site-form {
+    display: block;
+}
+
 .site-form form {
     clear: both;
     left: 50%;

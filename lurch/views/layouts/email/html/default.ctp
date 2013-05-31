@@ -11,7 +11,7 @@
                 <strong>Equipe Lurch</strong>
                 <font color="#888888">
                     <br>
-                    <a target="_blank" style="color:#F60" href="mailto:contato@lurch.com.br">contato@lurch.com.br</a> 
+                    <a target="_blank" style="color:#F60" href="mailto:suporte@festaonline.net">suporte@festaonline.net</a> 
                 </font>
             </div>
         </div>

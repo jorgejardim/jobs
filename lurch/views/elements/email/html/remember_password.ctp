@@ -1,7 +1,7 @@
 <h2 style="margin:0;padding:0;color:#666">Olá, <?php echo $name; ?>.</h2>
 <br>
 <div>
-    <p style="line-height:20px;color:#666">Você ou outra pessoa usou seu endereço de e-mail para lembrar a senha de acesso.</p>
+    <p style="line-height:20px;color:#666">Você ou outra pessoa usou seu endereço de e-mail para lembrar sua senha de acesso.</p>
     <p style="line-height:20px;color:#666">
         Seu e-mail de acesso: <strong><a target="_blank" style="color:#666;text-decoration:none;" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></strong><br />
         Sua senha: <strong><?php echo $password; ?></strong>

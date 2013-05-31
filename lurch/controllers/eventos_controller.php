@@ -25,15 +25,15 @@ class EventosController extends AppController {
 
     function admin_add() {
         if (!empty($this->data)) {
+            $this->data['Evento']['user_id'] = USER_ID;
+            $this->data['Evento']['inicio']  = $this->Commons->data_americana($this->data['Evento']['inicio']);
+            $this->data['Evento']['termino'] = $this->Commons->data_americana($this->data['Evento']['termino']);
             $this->Evento->create();
-            if ($this->Evento->save($this->data)) {
-                $this->data['Evento']['user_id'] = USER_ID;
-                $this->data['Evento']['inicio'] = $this->Commons->data_americana($this->data['Evento']['inicio']);
-                $this->data['Evento']['termino'] = $this->Commons->data_americana($this->data['Evento']['termino']);
-                $this->Session->setFlash(__('The', true) . ' ' . __('Evento', true) . ' ' . __('has been saved.', true));
+            if ($this->Evento->save($this->data)) {                
+                $this->Session->setFlash('Evento criado com sucesso.');
                 $this->redirect(array('action' => 'index'));
             } else {
-                $this->Session->setFlash('Evento salvo com sucesso.');
+                $this->Session->setFlash('Erro ao salvar o Evento.');
             }
         }
         $users = $this->Evento->User->find('list');
@@ -46,13 +46,13 @@ class EventosController extends AppController {
             $this->redirect(array('action' => 'index'));
         }
         if (!empty($this->data)) {
-            $this->data['Evento']['inicio'] = $this->Commons->data_americana($this->data['Evento']['inicio']);
+            $this->data['Evento']['inicio']  = $this->Commons->data_americana($this->data['Evento']['inicio']);
             $this->data['Evento']['termino'] = $this->Commons->data_americana($this->data['Evento']['termino']);
             if ($this->Evento->save($this->data)) {
-                $this->Session->setFlash(__('The', true) . ' ' . __('Evento', true) . ' ' . __('has been saved.', true));
+                $this->Session->setFlash('Evento salvo com sucesso.');
                 $this->redirect(array('action' => 'index'));
             } else {
-                $this->Session->setFlash('Evento salvo com sucesso.');
+                $this->Session->setFlash('Erro ao salvar o Evento.');
             }
         }
         if (empty($this->data)) {

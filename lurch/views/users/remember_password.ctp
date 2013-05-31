@@ -1,4 +1,5 @@
 <div class="site-form">
+<?php echo $this->Session->flash('email'); ?>
 <?php if(!isset($ok)) { ?>
     <?php
     echo $this->Form->create(

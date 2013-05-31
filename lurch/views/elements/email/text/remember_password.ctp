@@ -1,6 +1,6 @@
 Olá, <?php echo $name; ?>.
 
-Você ou outra pessoa usou seu endereço de e-mail para lembrar a senha de acesso.
+Você ou outra pessoa usou seu endereço de e-mail para lembrar sua senha de acesso.
 
 Seu e-mail de acesso: <?php echo $email; ?> 
 Sua senha: <?php echo $password; ?> 

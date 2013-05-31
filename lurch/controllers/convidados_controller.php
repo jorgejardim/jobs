@@ -132,12 +132,12 @@ class ConvidadosController extends AppController {
             $this->set('evento', $evento['Evento']);
             
             $this->Email->to = $convidado['Convidado']['email'];
-            $this->Email->subject = 'Confirmação de Presença';
+            $this->Email->subject = 'Confirmação de presença';
             $this->Email->template = 'confirmado_convidado'; 
             $this->Email->send();
             
-            $this->Email->to = 'jorge.testes@gmail.com';
-            $this->Email->subject = 'Confirmação de Presença';
+            $this->Email->to = $this->Email->from;
+            $this->Email->subject = 'Nova confirmação de presença';
             $this->Email->template = 'confirmado_sistema'; 
             $this->Email->send();
         }
