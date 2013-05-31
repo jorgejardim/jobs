@@ -20,7 +20,7 @@
                 <?php echo $convidado['Convidado']['celular']; ?>
                 &nbsp;
         </dd>
-        <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Quantidade de Convidados'); ?>:</dt>
+        <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Quantidade de Acompanhantes'); ?>:</dt>
         <dd<?php if ($i++ % 2 == 0) echo $class;?>>
                 <?php echo $convidado['Convidado']['qtd_convidados']; ?>
                 &nbsp;
@@ -31,7 +31,7 @@
                 &nbsp;
         </dd>
         <?php if($convidado['Convidado']['status']==1) { ?>
-            <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Quantidade de Confirmados'); ?>:</dt>
+            <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Quantidade de Acompanhantes Confirmados'); ?>:</dt>
             <dd<?php if ($i++ % 2 == 0) echo $class;?>>
                     <?php echo $convidado['Convidado']['qtd_confirmados']; ?>
                     &nbsp;

@@ -123,8 +123,10 @@ class ConvidadosController extends AppController {
     
     function confirmado($id = null, $evento_id = null) {
         
+        $this->loadModel('User');
         $convidado = $this->Convidado->read(null, $id);
         $evento    = $this->Convidado->Evento->read(null, $evento_id);
+        $usuario   = $this->User->read(null, $evento['Evento']['user_id']);
         
         if(!empty($convidado['Convidado']['email']) && $evento['Evento']['status']==1) {
             
@@ -136,7 +138,7 @@ class ConvidadosController extends AppController {
             $this->Email->template = 'confirmado_convidado'; 
             $this->Email->send();
             
-            $this->Email->to = $this->Email->from;
+            $this->Email->to = $usuario['User']['email'];
             $this->Email->subject = 'Nova confirmação de presença';
             $this->Email->template = 'confirmado_sistema'; 
             $this->Email->send();

@@ -8,7 +8,7 @@
         echo $this->Form->input('nome');
         echo $this->Form->input('email');
         echo $this->Form->input('celular', array('class' => 'telefone'));
-        echo $this->Form->input('qtd_convidados', array('label' => 'Quantidade de Convidados', 'class' => 'numeric2', 'value' => '1'));
+        echo $this->Form->input('qtd_convidados', array('label' => 'Quantidade de Acompanhantes', 'class' => 'numeric2', 'value' => '1'));
         ?>
     </fieldset>
     <?php echo $this->Form->end(__('Submit', true)); ?>
@@ -19,7 +19,7 @@
         <table class="admin-table" cellpadding="0" cellspacing="0">
             <tr>
                 <th><?php echo $this->Paginator->sort(__('Nome', true), 'nome'); ?></th>
-                <th><?php echo $this->Paginator->sort(__('Convidados', true), 'qtd_convidados'); ?></th>
+                <th><?php echo $this->Paginator->sort(__('Acompanhantes', true), 'qtd_convidados'); ?></th>
                 <th><?php echo $this->Paginator->sort(__('Status', true), 'status'); ?></th>
                 <th class="actions"><?php __('Actions'); ?></th>
             </tr>

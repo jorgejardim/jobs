@@ -2870,7 +2870,7 @@ a.project-category-title:hover{
 
 .site-form textarea {
 	width:100%;
-	padding:6px 0px;
+	padding:5px;
 	border:1px solid #e6e6e6;
         margin-bottom: 15px;
 }
@@ -3023,4 +3023,11 @@ tr.actions td ul li {
 tr.actions td ul li a {
 }
 tr.actions td ul li a:hover {
+}
+textarea, input[type="text"] {
+    font-family: Tahoma;
+    font-size: 14px;
+}
+textarea {
+    padding:5px;
 }
