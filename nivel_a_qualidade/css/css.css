@@ -1,0 +1,64 @@
+
+body, html {
+    background-image: url("../img/beach.jpg");
+    background-position: center top;
+    background-repeat: repeat;
+    background-size: 100% auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.root {
+}
+.bg-form {
+    background-image: url("../img/capture-beach.png");
+    background-repeat: no-repeat;
+    height: 659px;
+    left: 50%;
+    margin-left: -400px;
+    position: relative;
+    width: 700px;
+}
+.form form {
+}
+.form form .email {
+    left: 205px;
+    position: relative;
+    top: 367px;
+    width: 405px;
+}
+.form form .email input {
+    background-image: url("../img/transparent.gif");
+    border: 0 none;
+    height: 37px;
+    width: 404px;
+}
+.form form .submit {
+    left: 243px;
+    position: relative;
+    top: 411px;
+    width: 330px;
+}
+.form form .submit input {
+    background-color: transparent;
+    background-image: url("../img/transparent.gif");
+    border: 0 none;
+    color: transparent;
+    cursor: pointer;
+    height: 88px;
+    width: 329px;
+}
+.form form .termos {
+    font-size: 11px;
+    padding-left: 118px;
+    position: relative;
+    text-align: center;
+    top: 440px;
+}
+.form form .termos a {
+    color: #FFF;
+}
+.form form .termos a:hover {
+    color: #F90;
+}

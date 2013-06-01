@@ -3,7 +3,7 @@
     #WWW    
     RewriteCond %{HTTP_HOST} !^localhost
     RewriteCond %{HTTP_HOST} !^www\.
-    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/sistema/$1 [R=301,L]
+    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/backoffice/$1 [R=301,L]
 
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f

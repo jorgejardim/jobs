@@ -87,12 +87,11 @@ class DATABASE_CONFIG {
     var $developer = array(
             'driver' => 'mysql',
             'persistent' => false,
-            'host' => 'mysql01.nivelaqualidade.hospedagemdesites.ws',
-            'login' => 'nivelaqualidade',
+            'host' => 'localhost',
+            'login' => 'root',
             'password' => 't4r5zjj',
             'database' => 'nivelaqualidade',
             'prefix' => '',
-            'server' => '186.202.152.48'
     );
 
     var $test = array(
@@ -101,7 +100,7 @@ class DATABASE_CONFIG {
             'host' => 'localhost',
             'login' => 'root',
             'password' => 't4r5zjj',
-            'database' => 'cake_basico',
+            'database' => 'nivelaqualidade',
             'prefix' => '',
     );
 
