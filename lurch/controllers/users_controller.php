@@ -184,6 +184,12 @@ class UsersController extends AppController {
 
                 //salva usuario
                 if ($this->User->save($data)) {
+                    
+                    if(empty($data['User']['id'])) {
+                        $data['User']['id'] = $this->User->id;
+                    } if(empty($user_id)) {
+                        $user_id = $this->User->id;
+                    }
 
                     //telefones
                     $this->loadModel('UsersPhone');
@@ -277,6 +283,7 @@ class UsersController extends AppController {
     
     function register() {
         
+        $this->set('title_for_layout', 'Cadastre-se');
         $this->set('css_for_layout', 'pages/users_login');
         
         if (!empty($this->data)) {

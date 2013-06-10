@@ -1,11 +1,13 @@
 <?php if($ok!='ok') { ?>
 
-    <h2>Cadastre-se</h2>
-    <div id="login" class="cadastrar">
+    <div id="login" class="site-form">
         <?php
             echo $this->Form->create(array('action' => 'register'));    
             echo $this->Form->input('name', array('label' => 'Nome'));
             echo $this->Form->input('email', array('label' => 'E-mail'));
+            echo $this->Form->input('UsersPhone.number.C', array( 'label'=>'Celular',
+                                                                  'class'=>'telefone',
+                                                                  'div'=>array('class' => 'input text required')));
             echo $this->Form->input('password',array('label' => 'Senha', 'type'=>'password'));
             echo $this->Form->input('password_confirmation', array('label' => 'Confirmar Senha', 'type' => 'password', 'div'=>array('class' => 'input password required'))); 
             echo $this->Form->end('Enviar');

@@ -73,7 +73,8 @@
                 <input name="Entrar" class="submit-button" type="submit" value="Entrar">
                 </form>
             </div>
-            <a href="#" class="btn-slide">Login</a>
+            <a href="#" class="btn-slide">Login</a> | 
+            <a href="<?php echo $this->Html->url('/users/register', true); ?>">Cadastre-se</a>
           <?php } ?>
         </div>
         <div id="logo-box">

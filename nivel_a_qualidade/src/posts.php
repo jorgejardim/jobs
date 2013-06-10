@@ -1,5 +1,5 @@
 <?php
-require_once('src/inc.php');
+require_once('inc.php');
 
 /* *****************************************************************************
  * COMENTÁRIOS

@@ -32,6 +32,8 @@
 # Cake TMP Dirs
 /*/tmp/*
 !/*/tmp/
+/*/*/tmp/*
+!/*/*/tmp/
 
 /*/tmp/cache/*
 !/*/tmp/cache/
@@ -44,6 +46,9 @@
 /*/tmp/cache/persistent/*
 !/*/tmp/cache/persistent/
 !/*/tmp/cache/persistent/empty
+/*/*/tmp/cache/persistent/*
+!/*/*/tmp/cache/persistent/
+!/*/*/tmp/cache/persistent/empty
 
 /*/tmp/cache/views/*
 !/*/tmp/cache/views/
