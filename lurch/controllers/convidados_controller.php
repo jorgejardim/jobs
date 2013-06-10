@@ -40,9 +40,42 @@ class ConvidadosController extends AppController {
         
         //lista
         $this->Convidado->recursive = 0;
+        $this->paginate['limit'] = 1000;
         $convidados = $this->paginate();
         $this->set('convidados', $convidados);
         $this->_status();
+    }
+    
+    function admin_import($evento_id = null) {
+        if (!$evento_id && empty($this->data)) {
+            $this->Session->setFlash(__('Invalid convidado', true));
+            $this->redirect(array('action' => 'index'));
+        }
+        if (!empty($this->data)) {
+            
+            $file = $this->data['Convidado']['arquivo']['tmp_name'];
+            if (($handle = fopen($file, "r")) !== FALSE) {
+                while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+
+                    $convidado = array();
+                    $convidado['Convidado']['evento_id']      = $this->data['Convidado']['evento_id'];
+                    $convidado['Convidado']['nome']           = $data[0];
+                    $convidado['Convidado']['email']          = $data[1];
+                    $convidado['Convidado']['celular']        = @$data[2]?$data[2]:null;
+                    $convidado['Convidado']['qtd_convidados'] = @$data[3]?$data[3]:0;
+                    
+                    $this->Convidado->create();
+                    $this->Convidado->save($convidado);
+                }
+                fclose($handle);
+                $this->Session->setFlash('Convidado incluído com sucesso.');
+                $this->redirect(array('action' => 'add', $this->data['Convidado']['evento_id']));
+            }           
+        }
+        $evento = $this->Convidado->Evento->read(null, $evento_id);
+        $this->set(compact('evento'));
+        $this->set('title_for_layout', 'Importar Convidados');
+        $this->data['Convidado']['evento_id'] = $evento_id;
     }
 
     function admin_edit($id = null, $evento_id = null) {
@@ -149,6 +182,7 @@ class ConvidadosController extends AppController {
         $status[0] = '<span style="color:#F90;" title="Aguardando Confirmação" class="tooltip">Aguardando</span>';
         $status[1] = '<span style="color:#06F;" title="Convidado Confirmado" class="tooltip">Confirmado</span>';
         $status[2] = '<span style="color:#F00;" title="Convidado não Confirmado" class="tooltip">Não Vai</span>';
+        $status[3] = '<span style="color:#F00;" title="Convidado talvez irá ao Evendo" class="tooltip">Talvez</span>';
         $this->set('status', $status);
     }
 }

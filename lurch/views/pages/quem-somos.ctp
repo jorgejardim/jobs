@@ -3,16 +3,14 @@
       </div>
       <div class="column3_1">
         <div class="light_bolder" >
-          <?php echo $this->Html->image('site/upload/team/t.png', array('alt' => 'rework template')); ?>
+          <?php echo $this->Html->image('upload/'.$conteudo['quem-somos']['imagem'], array('alt' => 'rework template')); ?>
         </div>
       </div>
       <div class="column3_2 column-last">
         <h4>
-          O que é Lurch?
+          <?php echo $conteudo['quem-somos']['titulo']; ?>
         </h4>
-        <p>
-          Proin iaculis purus consequat sem cursus digni ssim. Aenean rhoncus posuere odio in tincclassunt. Donec porttitor entume suscipit. Lorem Duscribe tonana. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
-        </p>
+        <p><?php echo $conteudo['quem-somos']['texto']; ?></p>
       </div>
       <div class="cleared">
       </div>
@@ -20,81 +18,61 @@
       <hr>
       <div class="column3_1">
         <h5>
-          A Empresa
+          <?php echo $conteudo['empresa']['titulo']; ?>
         </h5>
-        <p>
-          Proin iaculis purus consequat sem cursus digni ssim.consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet commodo consequat. consectetur adipisicing elit Lorem ipsum dolor sit amet.
-        </p>
+        <p><?php echo $conteudo['empresa']['texto']; ?></p>
       </div>
       <div class="column3_1">
         <h5>
-          Por que utilizar o Lurch?
+          <?php echo $conteudo['porque']['titulo']; ?>
         </h5>
-        <ul class="checklist">
-          <li>Cursus digni ssim conse ctetur </li>
-          <li>Ut enim ad minim veniam </li>
-          <li>Donec porttitor entume suscipit</li>
-          <li>Labore et dolore magna aliqua </li>
-          <li>laboris nisi ut aliquip</li>
-        </ul>
+        <?php echo $conteudo['porque']['texto']; ?>
       </div>
       <div class="column3_1 column-last">
         <h5>
-          Missão
+          <?php echo $conteudo['missao']['titulo']; ?>
         </h5>
-        <blockquote>Aenean rhoncus posuere odio in tincclassunt. Donec porttitor entume suscipit. tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco .</blockquote>
+        <blockquote><?php echo $conteudo['missao']['texto']; ?></blockquote>
       </div>
       <div class="cleared">
       </div>
       <!-- End 3 What Columns -->
       <hr>
       <h4>
-        Equipe
+        <?php echo $conteudo['equipe_1']['titulo']; ?>
       </h4>
       <div class="column4_1">
         <div class="user_profile" >
-          <?php echo $this->Html->image('site/upload/team/m1.png', array('alt' => 'rework template')); ?>
-          <span class="user_profile_name">Lurch</span> <span class="user_profile_title">O Mordomo</span>
+          <?php echo $this->Html->image('upload/'.$conteudo['equipe_1']['imagem'], array('alt' => 'rework template')); ?>
         </div>
-        <p>
-          Aenean rhoncus posuere odio in tincclassunt. Donec porttitor entume suscipit. tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco .
-        </p>
+        <p><?php echo $conteudo['equipe_1']['texto']; ?></p>
         <div>
           <a class="social-facebook" href="#"></a> <a class="social-digg" href="#"></a> <a class="social-twitter" href="#"></a> <a class="social-pinterest" href="#"></a>
         </div>
       </div>
       <div class="column4_1">
         <div class="user_profile" >
-          <?php echo $this->Html->image('site/upload/team/m2.png', array('alt' => 'rework template')); ?>
-          <span class="user_profile_name">Christian</span> <span class="user_profile_title">Operações</span>
+          <?php echo $this->Html->image('upload/'.$conteudo['equipe_2']['imagem'], array('alt' => 'rework template')); ?>
         </div>
-        <p>
-          Aenean rhoncus posuere odio in tincclassunt. Donec porttitor entume suscipit. tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco .
-        </p>
+        <p><?php echo $conteudo['equipe_2']['texto']; ?></p>
         <div>
           <a class="social-facebook" href="#"></a> <a class="social-digg" href="#"></a> <a class="social-twitter" href="#"></a> <a class="social-pinterest" href="#"></a>
         </div>
       </div>
       <div class="column4_1">
         <div class="user_profile" >
-          <?php echo $this->Html->image('site/upload/team/m3.png', array('alt' => 'rework template')); ?>
-          <span class="user_profile_name">Olavo</span> <span class="user_profile_title">Tecnologia</span>
+          <?php echo $this->Html->image('upload/'.$conteudo['equipe_3']['imagem'], array('alt' => 'rework template')); ?>
         </div>
-        <p>
-          Aenean rhoncus posuere odio in tincclassunt. Donec porttitor entume suscipit. tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco .
-        </p>
+        <p><?php echo $conteudo['equipe_3']['texto']; ?></p>
         <div>
           <a class="social-facebook" href="#"></a> <a class="social-digg" href="#"></a> <a class="social-twitter" href="#"></a> <a class="social-pinterest" href="#"></a>
         </div>
       </div>
       <div class="column4_1 column-last">
         <div class="user_profile" >
-          <?php echo $this->Html->image('site/upload/team/m4.png', array('alt' => 'rework template')); ?>
-          <span class="user_profile_name">Rivera</span> <span class="user_profile_title">Desenvolvedor</span>
+          <?php echo $this->Html->image('upload/'.$conteudo['equipe_4']['imagem'], array('alt' => 'rework template')); ?>
         </div>
-        <p>
-          Aenean rhoncus posuere odio in tincclassunt. Donec porttitor entume suscipit. tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamco .
-        </p>
+        <p><?php echo $conteudo['equipe_4']['texto']; ?></p>
         <div>
           <a class="social-facebook" href="#"></a> <a class="social-digg" href="#"></a> <a class="social-twitter" href="#"></a> <a class="social-pinterest" href="#"></a>
         </div>

@@ -93,6 +93,11 @@ class AppController extends Controller {
                 $this->menu();
             }
         }
+        
+        /*
+        * CONTEUDO
+        */
+        $this->_conteudo_do_site();
     }
     
     /**
@@ -113,6 +118,29 @@ class AppController extends Controller {
     }
     
     /**
+    * Conteudo
+    *
+    * Função que monta o conteudo da página do site
+    *
+    * @access private
+    */
+    private function _conteudo_do_site() {
+        if(!isset($this->params["admin"])) {
+            $this->loadModel('Conteudo');
+            $Conteudos = $this->Conteudo->find('all', 
+                    array('conditions' => array(
+                                'Conteudo.action' => $this->params["action"],
+                                'Conteudo.pass' => @$this->params["pass"][0])));
+            if(is_array($Conteudos)) {
+                foreach($Conteudos as $Conteudo) {
+                    $conteudo[$Conteudo['Conteudo']['block']] = $Conteudo['Conteudo'];
+                }
+            }
+            $this->set('conteudo', @$conteudo);            
+        }
+    }
+    
+    /**
     * Auth
     *
     * Função de controle de acesso ao sistema
@@ -130,7 +158,7 @@ class AppController extends Controller {
             $this->Users->logout(true); 
         }
                 
-        $this->Auth->allow(array('login', 'logout', 'remember_password', 'activation_code', 'notificacao')); 
+        $this->Auth->allow(array('login', 'logout', 'remember_password', 'activation_code', 'notificacao', 'register')); 
         
         $this->Auth->authenticate = ClassRegistry::init('User'); // Altera o método de Hash, para chamalo pelo controller User        
         

@@ -3,23 +3,9 @@
       </div>
       <div class="column3_1">
         <h4>
-          Informações de Contato
+          <?php echo $conteudo['contato']['titulo']; ?>
         </h4>
-        <p>
-          Proin iaculis purus consequat sem cursus digni ssim. Aenean rhoncus posuere odio in tincclassunt. Donec porttitor entume suscipit. Lorem Duscribe tonana
-        </p>
-        <div class="contact-phone">
-          11 5777 2222
-        </div>
-        <div class="contact-fax">
-          11 5777 2222
-        </div>
-        <div class="contact-email">
-          contato@lurch.com.br
-        </div>
-        <div class="contact-address">
-          Av. Paulista 1330, 3o Andar
-        </div>
+        <?php echo $conteudo['contato']['texto']; ?>
       </div>
       <!-- End Contact Informations -->
       <div class="column3_2 column-last">

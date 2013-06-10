@@ -1,44 +1,44 @@
       <div class="feature-container">
         <div class="column3_1">
           <div class="feature-text1">
-            Como funciona?
+            <?php echo $conteudo['como']['titulo']; ?>
           </div>
           <div class="feature-text2">
-            Como confirmamos a presença dos convidados para o seu evento?
+            <?php echo $conteudo['como']['texto']; ?>
           </div>
         </div>
         <div class="column3_2 column-last">
           <div class="feature-box">
             <div class="feature-icon">
-              <?php echo $this->Html->image('site/images/icone-email.png', array('alt' => 'clean design')); ?>
+              <?php echo $this->Html->image('upload/'.$conteudo['email']['imagem'], array('alt' => 'clean design')); ?>
             </div>
             <div class="feature-name">
-              <a href="#">E-mail</a>
+              <a href="#"><?php echo $conteudo['email']['titulo']; ?></a>
             </div>
             <div class="feature-description">
-              Começamos com o envio de e-mail para todos os convidados
+              <?php echo $conteudo['email']['texto']; ?>
             </div>
           </div>
           <div class="feature-box">
             <div class="feature-icon">
-              <?php echo $this->Html->image('site/images/icone-sms.png', array('alt' => 'powerful functions')); ?>
+              <?php echo $this->Html->image('upload/'.$conteudo['sms']['imagem'], array('alt' => 'powerful functions')); ?>
             </div>
             <div class="feature-name">
-              <a href="#">SMS</a>
+              <a href="#"><?php echo $conteudo['sms']['titulo']; ?></a>
             </div>
             <div class="feature-description">
-              Os que não confirmarem por e-mail, receberão um SMS.
+              <?php echo $conteudo['sms']['texto']; ?>
             </div>
           </div>
           <div class="feature-box column-last">
             <div class="feature-icon">
-              <?php echo $this->Html->image('site/images/icone-telefone.png', array('alt' => 'layer slider')); ?>
+              <?php echo $this->Html->image('upload/'.$conteudo['telefone']['imagem'], array('alt' => 'layer slider')); ?>
             </div>
             <div class="feature-name">
-              <a href="#">Telefone</a>
+              <a href="#"><?php echo $conteudo['telefone']['titulo']; ?></a>
             </div>
             <div class="feature-description">
-              Para ter certeza de que todos confirmarão a presença, também ligaremos.
+              <?php echo $conteudo['telefone']['texto']; ?>
             </div>
           </div>
           <div class="cleared">

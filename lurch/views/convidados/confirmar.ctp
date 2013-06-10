@@ -28,7 +28,7 @@
         echo $this->Form->input('confirmar', array('type' => 'hidden', 'value'=>1));
         echo $this->Form->input('email', array('label' => 'Digite seu E-mail:'));
         echo $this->Form->input('celular', array('label' => 'Digite seu Celular:', 'class' => 'telefone'));
-        echo $this->Form->input('status', array('label' => 'Vai ao Evento?', 'options'=>array('1'=>'Sim', '2'=>'Não')));
+        echo $this->Form->input('status', array('label' => 'Vai ao Evento?', 'options'=>array('1'=>'Sim', '2'=>'Não', 3=>'Talvez')));
         echo $this->Form->input('qtd_confirmados', array('label' => 'Qual a quantidade de Acompanhantes?', 'class' => 'numeric2'));
         echo $this->Form->input('confirmados', array('label' => 'Digite os nomes dos Acompanhantes (um por linha)'));
         ?>

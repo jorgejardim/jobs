@@ -1,7 +1,6 @@
 <?php
-class Evento extends AppModel {
-	var $name = 'Evento';
-        var $displayField = 'nome';
+class Locai extends AppModel {
+	var $name = 'Locai';
 	var $validate = array(
 		'user_id' => array(
 			'numeric' => array(
@@ -23,7 +22,7 @@ class Evento extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-                'inicio' => array(
+		'contato_nome' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -33,7 +32,7 @@ class Evento extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-                'termino' => array(
+		'contato_email' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -43,17 +42,7 @@ class Evento extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-                'local_privado' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'local' => array(
+		'contato_telefone' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -145,21 +134,4 @@ class Evento extends AppModel {
 			'order' => ''
 		)
 	);
-
-	var $hasMany = array(
-		'Convidado' => array(
-			'className' => 'Convidado',
-			'foreignKey' => 'evento_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

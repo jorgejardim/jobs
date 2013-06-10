@@ -84,6 +84,10 @@ echo '<pre>';
 $constants = get_defined_constants(true);
 print_r($constants['user']);
 echo '</pre></div>';
+echo '<div><span class="cake-pre-log">Conteudo:</span>';
+echo '<pre>';
+print_r(@$conteudo);
+echo '</pre></div>';
 echo '</div>';
 echo '</div>';
 ?>

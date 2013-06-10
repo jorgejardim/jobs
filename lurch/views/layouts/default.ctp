@@ -114,7 +114,23 @@
             <div class="wope-slider" id="main-slider" style="width:960px;height:400px;">
             <div class="wopeslider-container">
                 <div class="wopeslider-slide slide1" style="time:60000000;">
-                <?php echo $this->Html->image('site/images/slider1.jpg', 
+                <?php echo $this->Html->image('upload/'.$conteudo['slide_1']['imagem'], 
+                        array('alt' => 'wope slider', 
+                                'class' => 'ws1',
+                                'style' => 'easing:easeOutExpo;delay:0;time:10000;action:faderight',
+                            )); 
+                ?>
+                </div>
+                <div class="wopeslider-slide slide2" style="time:60000000;">
+                <?php echo $this->Html->image('upload/'.$conteudo['slide_2']['imagem'], 
+                        array('alt' => 'wope slider', 
+                                'class' => 'ws1',
+                                'style' => 'easing:easeOutExpo;delay:0;time:10000;action:faderight',
+                            )); 
+                ?>
+                </div>
+                <div class="wopeslider-slide slide3" style="time:60000000;">
+                <?php echo $this->Html->image('upload/'.$conteudo['slide_2']['imagem'], 
                         array('alt' => 'wope slider', 
                                 'class' => 'ws1',
                                 'style' => 'easing:easeOutExpo;delay:0;time:10000;action:faderight',

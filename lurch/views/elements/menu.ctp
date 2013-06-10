@@ -16,6 +16,8 @@
             </div>
             <ul>
                 <li><a href="<?php echo $this->Html->url('/admin/users', true); ?>">Usuários</a></li>
+                <li><a href="<?php echo $this->Html->url('/admin/conteudos', true); ?>">Conteúdo do Site</a></li>
+                <li><a href="<?php echo $this->Html->url('/admin/locais', true); ?>">Locais Privados</a></li>
             </ul>  
 
           <?php } ?>   

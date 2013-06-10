@@ -10,6 +10,8 @@
         ?>
         <legend>Local do Evento</legend>
         <?php
+        echo $this->Form->input('Locai.id', array('type'=>'hidden'));
+        echo $this->Form->input('local_privado', array('options'=>array(0=>'Público', 1=>'Privado')));
         echo $this->Form->input('local', array('placeholder'=>'por exemplo: Parque do Ibirapuera'));
         echo $this->Form->input('cep', array('class'=>'cep'));
         echo $this->Form->input('endereco', array('class'=>'endereco'));

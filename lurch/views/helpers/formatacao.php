@@ -387,6 +387,7 @@ class FormatacaoHelper extends AppHelper {
 
             //retira os espaços consecutivos
             //$nomecompleto = utf8_encode($nomecompleto);
+            $nomecompleto = preg_replace("/-/", ' ', trim($nomecompleto));
             $nomecompleto = preg_replace("/_/", ' ', trim($nomecompleto));
             $nomecompleto = preg_split("/\s+/", trim($nomecompleto));
             $nomecompleto = implode(" ", $nomecompleto);	
