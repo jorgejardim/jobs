@@ -12,7 +12,7 @@
         <?php
         echo $this->Form->input('Locai.id', array('type'=>'hidden'));
         echo $this->Form->input('local_privado', array('options'=>array(0=>'Público', 1=>'Privado')));
-        echo $this->Form->input('local', array('placeholder'=>'por exemplo: Parque do Ibirapuera'));
+        echo $this->Form->input('local', array('placeholder'=>'por exemplo: Parque do Ibirapuera', 'class'=>'autocomplete_local', 'rel'=>'return_tb=Locai|return_fd=nome|fields_tb[]=Locai|fields_fd[]=nome'));
         echo $this->Form->input('cep', array('class'=>'cep'));
         echo $this->Form->input('endereco', array('class'=>'endereco'));
         echo $this->Form->input('numero', array('class'=>'numero'));
@@ -21,6 +21,14 @@
         echo $this->Form->input('cidade', array('class'=>'cidade'));
         echo $this->Estados->select('estado');
         ?>
+        <div class="contato_privado">
+        <legend>Dados da pessoa de contato no local</legend>
+        <?php
+        echo $this->Form->input('Locai.contato_nome', array('label'=>'Nome do Responsável'));
+        echo $this->Form->input('Locai.contato_email', array('label'=>'E-mail do Responsável'));
+        echo $this->Form->input('Locai.contato_telefone', array('label'=>'Telefone do Responsável', 'class'=>'telefone'));
+        ?>
+        </div>
         <legend></legend>
         <?php
         echo $this->Form->input('status', 

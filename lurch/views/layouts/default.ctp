@@ -79,7 +79,7 @@
         </div>
         <div id="logo-box">
           <div id="logo">
-            <?php echo $this->Html->image('site/images/logo-lurch.png', array('alt' => 'Confirmação de Presença', 'url' => array('controller' => 'pages', 'action' => 'home'))); ?>
+            <?php echo $this->Html->image('site/images/logo-lurch.png', array('alt' => 'Confirmação de Presença', 'url' => array('controller' => 'pages', 'action' => 'home', 'admin' => false))); ?>
           </div>
         </div>
         <div id="main-menu">
@@ -87,7 +87,7 @@
             <li> <a class="current-menu-item" href="<?php echo $this->Html->url('/', true); ?>">Início</a>
             <li> <a href="<?php echo $this->Html->url('/p/quem-somos', true); ?>">Quem Somos</a> </li>
             <li> <a href="<?php echo $this->Html->url('/p/como-funciona', true); ?>">Como Funciona?</a> </li>
-            <li> <a href="<?php echo $this->Html->url('/p/precos', true); ?>">Preços</a> </li>
+            <!-- <li> <a href="<?php echo $this->Html->url('/p/precos', true); ?>">Preços</a> </li>-->
             <li> <a href="<?php echo $this->Html->url('/p/contato', true); ?>">Contato</a> </li>
           </ul>
         </div>

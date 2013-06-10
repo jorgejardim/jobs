@@ -10,7 +10,7 @@
         <?php
         echo $this->Form->input('contato_nome', array('label'=>'Nome do Responsável'));
         echo $this->Form->input('contato_email', array('label'=>'E-mail do Responsável'));
-        echo $this->Form->input('contato_telefone', array('label'=>'Telefone do Responsável'));
+        echo $this->Form->input('contato_telefone', array('label'=>'Telefone do Responsável', 'class'=>'telefone'));
         ?>
         <legend>Endereço</legend>
         <?php

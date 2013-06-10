@@ -131,6 +131,7 @@ $(document).ready(function() {
                 return;
             }
             params = $(".autocomplete").attr('rel');
+            alert(www+controller+'/autocomplete/'+request.term+'/'+params);
             $.getJSON( www+controller+'/autocomplete/'+request.term+'/'+params , request, function( data, status, xhr ) {
                 cache[ term ] = data;
                 response( data );
