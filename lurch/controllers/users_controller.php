@@ -51,7 +51,8 @@ class UsersController extends AppController {
         $this->save($this->data, USER_ID);
         
         //lista usuario
-        $this->admin_view(USER_ID);
+        if(empty($this->data))
+            $this->admin_view(USER_ID);
     }
 
     function admin_index() {
@@ -221,7 +222,7 @@ class UsersController extends AppController {
                     }
 
                 } else {
-                    $this->Session->setFlash(__('The register could not be saved. Please, try again.', true));
+                    $this->Session->setFlash('O registro não pôde ser salvo. Por favor, tente novamente.');
                     return false;
                 }            
 
@@ -293,17 +294,22 @@ class UsersController extends AppController {
             $this->data['User']['group_id'] = 3;
             $this->data['User']['activation_code'] = $code;
             $salvar = $this->save($this->data);
-            
-            //envia email
-            $this->Email->to = $this->data['User']['email'];
-            $this->Email->subject = 'Finalizar cadastro';
-            $this->Email->template = 'activation_code'; 
-            $this->set('name', $this->data['User']['name']); 
-            $this->set('email', $this->data['User']['email']);
-            $this->set('code', $code); 
-            $this->Email->send();
+            if($salvar) {
+                
+                //envia email
+                $this->Email->to = $this->data['User']['email'];
+                $this->Email->subject = 'Finalizar cadastro';
+                $this->Email->template = 'activation_code'; 
+                $this->set('name', $this->data['User']['name']); 
+                $this->set('email', $this->data['User']['email']);
+                $this->set('code', $code); 
+                $this->Email->send();
 
-            $this->set('ok', true);  
+                $this->set('ok', true); 
+                
+            } else {
+                $this->Session->setFlash('O registro não pôde ser salvo. Por favor, tente novamente.');
+            }
         }
         
         $this->set('ok', @$salvar);

@@ -43,6 +43,7 @@ $(document).ready(function() {
     $(".moeda").priceFormat({thousandsSeparator:'', centsSeparator:'.', prefix: ''});
     $(".maskhora").mask("99:99",{placeholder:''}); 
     $(".number_prodesp").mask("999.999.999",{placeholder:''});
+    $(".data, input.nascimento").mask("99/99/9999",{placeholder:''});
     
     /*
     * DatePicker
@@ -64,7 +65,12 @@ $(document).ready(function() {
             showMonthAfterYear: false,
             yearSuffix: ''};
     $.datepicker.setDefaults($.datepicker.regional['pt']);        
-    $("input.data").datepicker();
+    $( "input.data" ).datepicker();
+    $( "input.nascimento" ).datepicker({ 
+        dateFormat: 'dd/mm/yy',
+        maxDate: 0,
+        defaultDate: '01/01/1980'
+    }); 
     $( "input.datatime" ).datetimepicker({ 
         dateFormat: 'dd/mm/yy',
         addSliderAccess: true,

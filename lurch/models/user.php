@@ -12,6 +12,7 @@ class User extends AppModel {
         'name' => array(
             'notempty' => array(
                 'rule' => array('notempty'),
+                'message' => 'Não pode ser vazio.' 
             ),
         ),
         'email' => array(
@@ -21,10 +22,18 @@ class User extends AppModel {
             ),
         ),
         'password' => array(
-            'notempty' => array(
-                'rule' => array('notempty'),
-            ),
-        ),        
+            'rule' => array('minLength', '6'),
+            'required' => true,
+            'allowEmpty' => false,
+            'message' => 'A senha deve ter pelo menos 6 caracteres.'             
+        ), 
+        'password_confirmation' => array(
+            'required' => true,
+            'match'=>array(
+                'rule' => 'validatePasswdConfirm',
+                'message' => 'As senhas não coincidem.'
+            )
+        ),
         'active' => array(
             'boolean' => array(
                 'rule' => array('boolean'),
@@ -132,4 +141,16 @@ class User extends AppModel {
             return false;       
         return true;
     }    
+    
+    /**
+    * Is Hash
+    *    
+    * Valida a confirmação de senha
+    */ 
+    function validatePasswdConfirm($data) {
+        if ($this->hashPasswordsDecode($this->data['User']['password']) !== $data['password_confirmation']) {
+            return false;
+        }
+        return true;
+    }
 }

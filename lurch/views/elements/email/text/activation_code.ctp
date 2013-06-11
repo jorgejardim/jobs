@@ -1,6 +1,6 @@
 Olá, <?php echo $nome; ?>.
 
-Você pode ter acabado de se cadastrar. Gostariamos de solicitar que clique no link abaixo para confirmar o seu e-mail.
+Para completar seu cadastro você deve acessar o link a seguir:
 
 <?php echo $html->url('/c/'.$code, true); ?>
 

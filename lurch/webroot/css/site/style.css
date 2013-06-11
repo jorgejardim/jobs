@@ -2930,7 +2930,7 @@ a.project-category-title:hover{
     text-align: center;
     width: 35px !important;
 }
-.data {
+.data, .nascimento, .nascimento.hasDatepicker {
     width: 80px !important;
 }
 .datainstr {

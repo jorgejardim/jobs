@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="welcome-button">
-          <a class="big-button" href="#">Veja Nossos Planos</a>
+            <!-- <a class="big-button" href="#">Veja Nossos Planos</a>-->
         </div>
         <div class="cleared">
         </div>
