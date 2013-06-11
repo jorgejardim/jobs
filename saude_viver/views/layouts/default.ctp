@@ -4,7 +4,7 @@
     <head>
         <title><?php echo $title_for_layout?$title_for_layout.' - ':''; ?>Consultoria e Assessoria em Nutrição Saúde Viver</title>        
         <meta content="<?php echo $title_for_layout?$title_for_layout:'Consultoria e Assessoria em Nutrição Saúde Viver'; ?>" name="title" />
-        <meta content="<?php echo $conteudo['text']?substr(strip_tags($conteudo['text']),0,400):'Consultoria para estabelecimentos alimentícios de qualidade, higiene, manipulação de alimentos, boas práticas, legislação sanitária, fichas técnicas, treinamentos e cursos na área.'; ?>" name="description" />
+        <meta content="<?php echo @$conteudo['text']?substr(strip_tags($conteudo['text']),0,400):'Consultoria para estabelecimentos alimentícios de qualidade, higiene, manipulação de alimentos, boas práticas, legislação sanitária, fichas técnicas, treinamentos e cursos na área.'; ?>" name="description" />
         <meta content="alimentação,alimentação esporte,alimentação saudavel,alimentação saudável,alimento,alimento é,alimentício,artigo,artigo cientifico,artigos,artigos cientificos,artigos científicos,treinamento,cursos,aulas,artigos empresas,artigos esportivos,artigos infantil,artigos trabalho,assessoria,bacalhau,boas praticas manipulação,bolos,bolos decorados,camarão,consultora,consultores,consultoria,consultoria empresas,consultoria o que é,culinaria,culinária,diet,diets,doces,empresa assessoria,empresa consultoria,empresas assessoria,empresas trei...essoria,aceçoria,manipulasão,light,restaurante,bar,supermercado,escola,lanchonete,comida,cozinha,industrial,cozinha industrial,alimentação coletiva,refeição transportada,marmitex,treinamento funcionario,pop,procedimento operacional padronizado,padroniza,padronização,nutricional,caloria,dieta,higclean,procedimento,organizar,organização,restaurantes,bares,cantinas,produtos limpeza,limpeza,produto,produtos,rotular,salgados,doces,molhos,sobremesas,diabete,diabetes,hipertenção,hipertensao,ipertensao,ipertenção" name="keywords" />
         <meta name="verify-v1" content="dRKOqDB4qcMADEfWIAyIxpwtrjV1U5wrbMsf7gSgd3Q=" />
         <meta name="verify-v1" content="DaYnpz+50gZHU1TeZC2/wxmUpnH4XzVRyyVzoVlVsoo=" />
@@ -165,7 +165,24 @@
                 <div style="display:inline;">
                     <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1024072896/?value=1&amp;label=OQSPCOC-oAIQwLmo6AM&amp;guid=ON&amp;script=0"/>
                 </div>
-            </noscript>        
+            </noscript>  
+            <!-- Google Code for Convers&atilde;o Cadastro Conversion Page -->
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 1024072896;
+                var google_conversion_language = "en";
+                var google_conversion_format = "2";
+                var google_conversion_color = "ffffff";
+                var google_conversion_label = "AoWxCKii5QQQwLmo6AM";
+                var google_conversion_value = 0;
+                /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+            <noscript>
+                <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1024072896/?value=0&amp;label=AoWxCKii5QQQwLmo6AM&amp;guid=ON&amp;script=0"/>
+                </div>
+            </noscript>            
         <?php } ?>
     </body>
 </html>

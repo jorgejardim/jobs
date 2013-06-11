@@ -60,7 +60,24 @@
                                                                 <div style="display:inline;">
                                                                     <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1024072896/?value=1&amp;label=QqPWCJDSsgEQwLmo6AM&amp;guid=ON&amp;script=0"/>
                                                                 </div>
-                                                            </noscript>                                                            
+                                                            </noscript>  
+                                                            <!-- Google Code for Compra de Curso Conversion Page -->
+                                                            <script type="text/javascript">
+                                                                /* <![CDATA[ */
+                                                                var google_conversion_id = 1024072896;
+                                                                var google_conversion_language = "en";
+                                                                var google_conversion_format = "2";
+                                                                var google_conversion_color = "ffffff";
+                                                                var google_conversion_label = "56eECLCh5QQQwLmo6AM";
+                                                                var google_conversion_value = 0;
+                                                                /* ]]> */
+                                                            </script>
+                                                            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+                                                            <noscript>
+                                                                <div style="display:inline;">
+                                                                    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1024072896/?value=0&amp;label=56eECLCh5QQQwLmo6AM&amp;guid=ON&amp;script=0"/>
+                                                                </div>
+                                                            </noscript>
                                                         </td>
                                                     </tr>                                                    
                                                 </tbody>
@@ -233,14 +250,14 @@
                                                                 <div class="i">
                                                                     <div class="limitadas">Disponibilizamos nossos<br />materiais de apoio para download.</div>
                                                                     <div class="inscrevase-right">
-                                                                        <?php echo $html->image('botao_inscreva-se.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); ?>                                                                
+                                                                        <?php echo $html->image('botao_material_de_apoio.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); ?>                                                                
                                                                     </div>                                                                
                                                                 </div>                                                              
                                                             <?php } elseif($curso['curso_online']) { ?>
                                                                 <div class="i">
                                                                     <div class="limitadas">Curso Online.<br />Matricule-se e comece a estudar hoje mesmo.</div>
                                                                     <div class="inscrevase-right">
-                                                                        <?php echo $html->image('botao_inscreva-se.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); ?>                                                                
+                                                                        <?php echo $html->image('botao_curso_online.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); ?>                                                                
                                                                     </div>                                                                
                                                                 </div>                                                            
                                                             <?php } else { ?>
@@ -249,7 +266,15 @@
                                                                     <strong><?php echo $this->Formatacao->dataCurso($curso['data'], $curso['data_final']); ?></strong>
                                                                     <div class="limitadas">Vagas Limitadas</div>
                                                                     <div class="inscrevase-right">
-                                                                        <?php echo $html->image('botao_inscreva-se.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); ?>                                                                
+                                                                        <?php 
+                                                                        if($curso['material_de_apoio']) {
+                                                                            echo $html->image('botao_material_de_apoio.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); 
+                                                                        } elseif($curso['curso_online']) {
+                                                                            echo $html->image('botao_curso_online.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); 
+                                                                        } else {
+                                                                            echo $html->image('botao_inscreva-se.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); 
+                                                                        }
+                                                                        ?>
                                                                     </div>                                                                
                                                                 </div>
                                                             <?php } ?>
@@ -278,7 +303,13 @@
                                                             <?php } ?>
                                                             <?php if(!$curso['material_de_apoio']) { ?>
                                                             <div class="inscrevase-center">
-                                                                <?php echo $html->image('botao_inscreva-se.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); ?>                                                                
+                                                                <?php 
+                                                                if($curso['curso_online']) {
+                                                                    echo $html->image('botao_curso_online.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); 
+                                                                } else {
+                                                                    echo $html->image('botao_inscreva-se.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); 
+                                                                }
+                                                                ?>                                                                  
                                                             </div>
                                                             <?php } if((trim($curso['contato']))) { ?>
                                                             <div class="t">Fale conosco:</div> 
@@ -291,7 +322,15 @@
                                                             <div class="i"><?php echo nl2br($curso['cancelamento']); ?> </div> 
                                                             <?php } ?>
                                                             <div class="inscrevase-center">
-                                                                <?php echo $html->image('botao_inscreva-se.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); ?>                                                                
+                                                                <?php 
+                                                                if($curso['material_de_apoio']) {
+                                                                    echo $html->image('botao_material_de_apoio.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); 
+                                                                } elseif($curso['curso_online']) {
+                                                                    echo $html->image('botao_curso_online.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); 
+                                                                } else {
+                                                                    echo $html->image('botao_inscreva-se.png', array('class' => $botao, 'url' => '/cursos/inscricao/'.$curso['id'])); 
+                                                                }
+                                                                ?>                                                                
                                                             </div>                                                            
                                                         </td>
                                                     </tr>                                                    
