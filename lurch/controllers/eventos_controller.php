@@ -31,7 +31,7 @@ class EventosController extends AppController {
             $this->data['Evento']['termino'] = $this->Commons->data_americana($this->data['Evento']['termino']);
             $this->Evento->create();
             if ($this->Evento->save($this->data)) {  
-                if($this->data['Evento']['local_privado']==1) {
+                if($this->data['Evento']['local_privado']==0) {
                     $data_local1['Locai'] = $this->data['Evento'];
                     $data_local2['Locai'] = $this->data['Locai'];
                     $data_local = array_merge_recursive($data_local1, $data_local2);

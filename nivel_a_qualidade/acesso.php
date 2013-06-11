@@ -23,17 +23,17 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 .form form {
-    left: 730px;
+    left: 732px;
     position: absolute;
-    top: 377px;
+    top: 379px;
 }
 .form form .email {
 }
 .form form .email input {
     border: 0px;
-    height: 23px;
+    height: 21px;
     margin-bottom: 26px;
-    width: 268px;
+    width: 261px;
     background-color: #FFF;
 }
 .form form .submit {

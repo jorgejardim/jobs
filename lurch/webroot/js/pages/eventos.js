@@ -41,7 +41,7 @@ $(document).ready(function() {
 });
 
 function chama_contato_privado() {
-    if( $( "#EventoLocalPrivado" ).val()==1 ) {
+    if( $( "#EventoLocalPrivado" ).val()==0 ) {
         $( ".contato_privado" ).show();
     } else {
         $( ".contato_privado" ).hide();
