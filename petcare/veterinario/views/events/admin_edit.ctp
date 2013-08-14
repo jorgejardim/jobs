@@ -23,6 +23,5 @@
 
         <li><?php echo $this->Html->link(__('Deletar', true), array('action' => 'delete', $this->Form->value('Event.id')), null, sprintf(__('Are you sure you want to delete # %s?', true), $this->Form->value('Event.id'))); ?></li>
         <li><?php echo $this->Html->link(__('Listar Eventos', true), array('action' => 'index')); ?></li>
-        <li><?php echo $this->Html->link(__('Listar Inscrições', true), array('controller' => 'inscriptions', 'action' => 'index')); ?> </li>
     </ul>
 </div>

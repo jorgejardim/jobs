@@ -1,10 +1,10 @@
 <div class="inscriptions index">
-    <h2><?php __('Inscriptions');?></h2>
+    <h2><?php __('Inscrições');?></h2>
     <table cellpadding="0" cellspacing="0">
         <tr>
-                                <th><?php echo $this->Paginator->sort(__('Event Id', true), 'event_id');?></th>
-                                <th><?php echo $this->Paginator->sort(__('User Id', true), 'user_id');?></th>
-                                <th><?php echo $this->Paginator->sort(__('How Did', true), 'how_did');?></th>
+                                <th><?php echo $this->Paginator->sort(__('Evento', true), 'event_id');?></th>
+                                <th><?php echo $this->Paginator->sort(__('Usuário', true), 'user_id');?></th>
+                                <th><?php echo $this->Paginator->sort(__('Como soube?', true), 'how_did');?></th>
                                 <th><?php echo $this->Paginator->sort(__('Created', true), 'created');?></th>
                         <th class="actions"><?php __('Actions');?></th>
         </tr>
@@ -51,10 +51,6 @@
 <div class="actions">
     <h3><?php __('Actions'); ?></h3>
     <ul>
-        <li><?php echo $this->Html->link(__('New', true).' '.__('Inscription', true), array('action' => 'add')); ?></li>
-        		<li><?php echo $this->Html->link(__('List', true).' '.__('Events', true), array('controller' => 'events', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New', true).' '.__('Event', true), array('controller' => 'events', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List', true).' '.__('Users', true), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New', true).' '.__('User', true), array('controller' => 'users', 'action' => 'add')); ?> </li>
+        <li><?php echo $this->Html->link('Listar Eventos', array('controller' => 'events', 'action' => 'index')); ?> </li>
     </ul>
 </div>

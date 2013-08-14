@@ -16,6 +16,10 @@ class CommentsController extends AppController {
         }
         $this->set('comment', $this->Comment->read(null, $id));
     }
+    
+    function add() {
+	$this->admin_add();
+    }
 
     function admin_add() {
         if (!empty($this->data)) {
@@ -25,8 +29,7 @@ class CommentsController extends AppController {
                 
                 $comentario = $this->Comment->read(null, $this->Comment->id);
                 
-                //$this->Email->to = 'vetwecare@petcare.com.br';
-                $this->Email->to = 'jorge@conteudodinamico.com.br';
+                $this->Email->to = EMAIL_TO; //CORE.PHP
                 $this->Email->subject = 'Novo Comentário';
                 $this->Email->template = 'comentarios'; 
                 $this->set('id', $comentario['User']['id']);
@@ -36,8 +39,8 @@ class CommentsController extends AppController {
                 $this->set('date', $this->Commons->data_brasileira($comentario['Comment']['created']));
                 $this->Email->send();                
                 
-                $this->Session->setFlash(__('The', true) . ' ' . __('Comment', true) . ' ' . __('has been saved.', true));
-                $this->redirect(array('action' => 'index'));
+                $this->Session->setFlash('Comentário enviado com sucesso.');
+                $this->redirect(array('action' => 'add'));
             } else {
                 $this->Session->setFlash(__('The', true) . ' ' . __('Comment', true) . ' ' . __('could not be saved. Please, try again.', true));
             }

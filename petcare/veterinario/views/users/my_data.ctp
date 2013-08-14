@@ -6,31 +6,21 @@
         echo $this->Form->input('name');
         echo $this->Form->input('email', array('label'=>'E-mail'));
         echo $this->Form->input('password');
-        ?>        
+        ?>            
         
-        <legend>Telefones</legend>
+        <legend>Informações Pessoais</legend>
         <?php
-        echo $this->Form->input('UsersPhone.number.R', array(
-            'label'=>'Telefone Residêncial',
+        echo $this->Form->input('UsersData.crmv', array('label' => 'CRMV'));
+	echo $this->Form->input('UsersData.clinica', array('label' => 'Clínica'));                       
+	echo $this->Form->input('UsersData.birth', array('class'=>'data', 'type'=>'text', 'label'=>'Aniversário')); 
+	echo $this->Form->input('UsersPhone.number.R', array(
+            'label'=>'Telefone',
             'class'=>'telefone',
             'value'=>@$this->data['UsersPhone']['number']['R']));
         echo $this->Form->input('UsersPhone.number.C', array(
             'label'=>'Celular',
             'class'=>'telefone',
             'value'=>@$this->data['UsersPhone']['number']['C']));
-        ?>       
-        
-        <legend>Informações Pessoais</legend>
-        <?php
-        echo $this->Form->input('UsersData.birth', array('class'=>'data', 'type'=>'text', 'label'=>'Aniversário')); 
-        echo $this->Form->input('UsersData.sex', array('label'=>'Sexo', 'empty'=>true, 'options'=>array(
-            'Masculino'=>'Masculino',
-            'Feminino'=>'Feminino'))); 
-        echo $this->Form->input('UsersData.civil_status', array('label'=>'Estado Civil', 'empty'=>true, 'options'=>array(
-            'Solteiro'=>'Solteiro',
-            'Casado'=>'Casado',
-            'Divorciado'=>'Divorciado',
-            'Viuvo'=>'Viúvo'))); 
         ?>
         
         <legend>Endereço</legend>
@@ -42,12 +32,6 @@
         echo $this->Form->input('UsersAddress.neighborhood', array('class'=>'bairro'));
         echo $this->Form->input('UsersAddress.city', array('class'=>'cidade'));
         echo $this->Form->input('UsersAddress.state', array('class'=>'estado'));
-        ?>
-
-        <legend><?php __('Foto'); ?></legend>
-        <?php
-        echo $this->Commons->foto(null, @$this->data['User']['id']);
-        echo $this->Form->input('Arquivo.avatar', array('label' => 'Foto', 'type' => 'file'));
         ?>
 
     </fieldset>

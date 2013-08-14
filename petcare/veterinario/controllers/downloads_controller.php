@@ -3,6 +3,10 @@
 class DownloadsController extends AppController {
 
     var $name = 'Downloads';
+    
+    function index() {
+	$this->admin_index();
+    }
 
     function admin_index() {
         $this->Download->recursive = 0;

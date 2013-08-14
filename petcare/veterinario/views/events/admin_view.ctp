@@ -55,6 +55,5 @@
         <li><?php echo $this->Html->link(__('Deletar', true), array('action' => 'delete', $event['Event']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $event['Event']['id'])); ?> </li>
         <li><?php echo $this->Html->link(__('Listar Eventos', true), array('action' => 'index')); ?> </li>
         <li><?php echo $this->Html->link(__('Novo Evento', true), array('action' => 'add')); ?> </li>
-        <li><?php echo $this->Html->link(__('Listar Inscrições', true), array('controller' => 'inscriptions', 'action' => 'index')); ?> </li>
     </ul>
 </div>

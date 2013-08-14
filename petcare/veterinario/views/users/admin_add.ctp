@@ -1,9 +1,13 @@
 <div class="users form">
     <?php echo $this->Form->create('User'); ?>
     <fieldset>
-        <legend><?php __('Admin Add'); ?> <?php __('User'); ?></legend>
+        <legend><?php __('Admin Add'); ?> <?php if(GROUP_REFERENCE=='root') { __('User'); } else { echo 'Administrador'; } ?></legend>
         <?php
-        echo $this->Form->input('group_id');
+        if(GROUP_REFERENCE=='root') {
+	    echo $this->Form->input('group_id');
+        } else {
+	    echo $this->Form->input('group_id', array('type'=>'hidden', 'value'=>2));
+        }
         echo $this->Form->input('name');
         echo $this->Form->input('email');
         echo $this->Form->input('password');        
@@ -16,7 +20,5 @@
     <ul>
 
         <li><?php echo $this->Html->link(__('List', true) . ' ' . __('Users', true), array('action' => 'index')); ?></li>
-        <li><?php echo $this->Html->link(__('List', true) . ' ' . __('Groups', true), array('controller' => 'groups', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New', true) . ' ' . __('Group', true), array('controller' => 'groups', 'action' => 'add')); ?> </li>
     </ul>
 </div>

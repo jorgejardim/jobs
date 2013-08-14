@@ -2,7 +2,7 @@
     <h2><?php __('Users'); ?></h2>
     <table cellpadding="0" cellspacing="0">
         <tr>
-            <th><?php echo $this->Paginator->sort(__('Group Id', true), 'group_id'); ?></th>
+            <th><?php echo $this->Paginator->sort('Grupo', 'group_id'); ?></th>
             <th><?php echo $this->Paginator->sort(__('Name', true), 'name'); ?></th>
             <th><?php echo $this->Paginator->sort(__('Email', true), 'email'); ?></th>
             <th><?php echo $this->Paginator->sort(__('Created', true), 'created'); ?></th>
@@ -51,8 +51,12 @@
 <div class="actions">
     <h3><?php __('Actions'); ?></h3>
     <ul>
-        <li><?php echo $this->Html->link(__('New', true) . ' ' . __('User', true), array('action' => 'add')); ?></li>
-        <li><?php echo $this->Html->link(__('List', true) . ' ' . __('Groups', true), array('controller' => 'groups', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New', true) . ' ' . __('Group', true), array('controller' => 'groups', 'action' => 'add')); ?> </li>
+	<?php if(GROUP_REFERENCE=='root') { ?>
+	    <li><?php echo $this->Html->link(__('New', true) . ' ' . __('User', true), array('action' => 'add')); ?></li>
+	    <li><?php echo $this->Html->link(__('List', true) . ' ' . __('Groups', true), array('controller' => 'groups', 'action' => 'index')); ?> </li>
+	    <li><?php echo $this->Html->link(__('New', true) . ' ' . __('Group', true), array('controller' => 'groups', 'action' => 'add')); ?> </li>
+        <?php } else { ?>
+	    <li><?php echo $this->Html->link('Novo Administrador', array('action' => 'add')); ?></li>
+	<?php } ?>
     </ul>
 </div>

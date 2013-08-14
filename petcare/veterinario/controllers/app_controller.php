@@ -37,7 +37,7 @@ class AppController extends Controller {
                     'port'     => '465',
                     'host'     => 'ssl://smtp.gmail.com',
                     'username' => 'jorge.testes@gmail.com',
-                    'password' => 'gomes1234',                                                
+                    'password' => 'jfjt4r5z',                                                
                 )),
         'Enum',
         'Commons',
@@ -129,7 +129,7 @@ class AppController extends Controller {
             $this->Users->logout(true); 
         }
                 
-        $this->Auth->allow(array('login', 'logout', 'remember_password', 'activation_code', 'notificacao')); 
+        $this->Auth->allow(array('login', 'logout', 'remember_password', 'activation_code', 'notificacao', 'register')); 
         
         $this->Auth->authenticate = ClassRegistry::init('User'); // Altera o método de Hash, para chamalo pelo controller User        
         
@@ -184,7 +184,7 @@ class AppController extends Controller {
         * LIBERAR TUDO
         * Descomente a chamada dos metodos forceAllow para liberar os acessos
         */
-        if($_SERVER['HTTP_HOST']=='localhost') {
+        if($_SERVER['HTTP_HOST']=='localhostXXX') {
             // Libera acesso para localhost
             $this->AclCaching->forceAllow();
             if(!USER_ID && $this->params['controller']!='users') {

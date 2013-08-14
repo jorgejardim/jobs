@@ -35,7 +35,7 @@
  */
         if(isset($_SERVER['HTTP_HOST'])) {
             if($_SERVER['HTTP_HOST']=='localhost' ||
-               $_SERVER['REMOTE_ADDR']=='187.37.143.10') {
+               $_SERVER['REMOTE_ADDR']=='187.37.139.232') {
                 Configure::write('debug', 2);
             } else {
                 Configure::write('debug', 0);
@@ -319,3 +319,11 @@
  * to fix the date & time related errors.
  */        
         date_default_timezone_set('America/Sao_Paulo');
+        
+        
+/**
+ * Emails
+ */        
+        define('EMAIL_PADRAO', 'vetwecare@petcare.com.br');     
+        define('EMAIL_TESTE', 'jorge@conteudodinamico.com.br'); 
+        define('EMAIL_TO', EMAIL_TESTE); 

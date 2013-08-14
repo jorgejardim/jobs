@@ -3,12 +3,33 @@
 class EventsController extends AppController {
 
     var $name = 'Events';
-
-    function admin_index() {
-        $this->Event->recursive = 0;
-        $this->set('events', $this->paginate());
+    
+    function index() {
+	$this->admin_index();
     }
 
+    function admin_index() {
+    
+        $this->Event->recursive = 0;
+        $events = $this->paginate();
+        
+        foreach($events as $k => $v) {
+	    
+	    $inscricoes = $this->Event->Inscription->query("SELECT * 
+							     FROM `inscriptions` AS `Inscription` 
+							     WHERE `Inscription`.`event_id` = ".$events[$k]['Event']['id']." 
+							     GROUP BY `Inscription`.`user_id`");
+			     
+	    $events[$k]['Event']['inscricoes'] = count($inscricoes);
+        }
+        
+        $this->set('events', $events);
+    }
+
+    function view($id = null) {
+	$this->admin_view($id);
+    }
+    
     function admin_view($id = null) {
         if (!$id) {
             $this->Session->setFlash(__('Invalid event', true));

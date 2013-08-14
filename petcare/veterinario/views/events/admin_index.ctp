@@ -5,6 +5,7 @@
             <th><?php echo $this->Paginator->sort(__('Nome', true), 'name'); ?></th>
             <th><?php echo $this->Paginator->sort(__('Data', true), 'date'); ?></th>
             <th><?php echo $this->Paginator->sort(__('Hora', true), 'time'); ?></th>
+            <th>Inscrições</th>
             <th class="actions"><?php __('Actions'); ?></th>
         </tr>
         <?php
@@ -19,8 +20,10 @@
                 <td><?php echo $event['Event']['name']; ?>&nbsp;</td>
                 <td class="text-center"><?php echo $formatacao->data_brasileira($event['Event']['date']); ?>&nbsp;</td>
                 <td class="text-center"><?php echo substr($event['Event']['time'],0,5); ?>&nbsp;</td>
+                <td class="text-center"><?php echo $event['Event']['inscricoes']; ?>&nbsp;</td>
                 <td class="actions">
                     <?php echo $this->Html->link(__('View', true), array('action' => 'view', $event['Event']['id']), array('class' => 'view')); ?>
+                    <?php echo $this->Html->link(__('Inscrições', true), array('controller' => 'inscriptions', 'action' => 'index', $event['Event']['id']), array('class' => 'view')); ?>
                     <?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $event['Event']['id']), array('class' => 'edit')); ?>
                     <?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $event['Event']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $event['Event']['id']), array('class' => 'delete')); ?>
                 </td>
@@ -46,6 +49,5 @@
     <h3><?php __('Actions'); ?></h3>
     <ul>
         <li><?php echo $this->Html->link(__('Novo Evento', true), array('action' => 'add')); ?></li>
-        <li><?php echo $this->Html->link(__('Listar Inscrições', true), array('controller' => 'inscriptions', 'action' => 'index')); ?> </li>
     </ul>
 </div>
