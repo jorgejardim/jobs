@@ -517,7 +517,6 @@ form .error, form .error-message {
 }
 .success, .message, .cake-error, .cake-debug, .notice, p.error, .error-message {
     background: -moz-linear-gradient(center top , #FFCC00, #E6B800) repeat-x scroll 0 0 #FFCC00;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFCC00), to(#E6B800), color-stop(.6,#FFCC00));
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px 4px 4px 4px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
@@ -528,7 +527,6 @@ form .error, form .error-message {
 }
 .success, .message, .cake-error, p.error, .error-message {
     background: -moz-linear-gradient(center top , #EE5F5B, #C43C35) repeat-x scroll 0 0 #C43C35;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EE5F5B), to(#C43C35), color-stop(.6,#EE5F5B));
     border: 1px solid rgba(0, 0, 0, 0.5);
     clear: both;
     color: #FFFFFF;
@@ -536,7 +534,6 @@ form .error, form .error-message {
 }
 .success {
     background: -moz-linear-gradient(center top , #76BF6B, #3B8230) repeat-x scroll 0 0 #3B8230;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#76BF6B), to(#3B8230), color-stop(.6,#76BF6B));
     border: 1px solid rgba(0, 0, 0, 0.5);
     clear: both;
     color: #FFFFFF;

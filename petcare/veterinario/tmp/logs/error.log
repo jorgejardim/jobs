@@ -12,3 +12,8 @@
 2013-05-15 00:44:10 Warning: Warning (512): <span style="color:Red;text-align:left"><b>Erro:</b> 1054: Unknown column 'Array' in 'field list'</span> in [/var/www/codigos/cakephp/cake/libs/model/datasources/dbo_source.php, line 684]
 2013-05-15 00:44:24 Warning: Warning (512): <span style="color:Red;text-align:left"><b>Erro:</b> 1054: Unknown column 'Array' in 'field list'</span> in [/var/www/codigos/cakephp/cake/libs/model/datasources/dbo_source.php, line 684]
 2013-05-15 00:46:29 Warning: Warning (512): <span style="color:Red;text-align:left"><b>Erro:</b> 1048: Column 'file' cannot be null</span> in [/var/www/codigos/cakephp/cake/libs/model/datasources/dbo_source.php, line 684]
+2013-08-14 11:38:47 Warning: Warning (2): mysql_connect() [http://php.net/function.mysql-connect]: Can't connect to MySQL server on 'mysql07.petcare.com.br' (4) in [/var/www/codigos/cakephp/cake/libs/model/datasources/dbo/dbo_mysql.php, line 561]
+2013-08-14 11:38:47 Warning: Warning (2): mysql_select_db() expects parameter 2 to be resource, boolean given in [/var/www/codigos/cakephp/cake/libs/model/datasources/dbo/dbo_mysql.php, line 567]
+2013-08-14 11:38:47 Warning: Warning (2): mysql_get_server_info() expects parameter 1 to be resource, boolean given in [/var/www/codigos/cakephp/cake/libs/model/datasources/dbo/dbo_mysql.php, line 575]
+2013-08-14 11:38:47 Warning: Warning (2): mysql_query() expects parameter 2 to be resource, boolean given in [/var/www/codigos/cakephp/cake/libs/model/datasources/dbo/dbo_mysql.php, line 609]
+2013-08-14 11:38:47 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/codigos/cakephp/cake/libs/debugger.php:673) in [/var/www/codigos/cakephp/cake/libs/controller/controller.php, line 742]

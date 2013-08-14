@@ -35,7 +35,7 @@
  */
         if(isset($_SERVER['HTTP_HOST'])) {
             if($_SERVER['HTTP_HOST']=='localhost' ||
-               $_SERVER['REMOTE_ADDR']=='187.37.143.10') {
+               $_SERVER['REMOTE_ADDR']=='189.33.207.40') {
                 Configure::write('debug', 2);
             } else {
                 Configure::write('debug', 0);

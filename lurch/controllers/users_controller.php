@@ -238,17 +238,22 @@ class UsersController extends AppController {
         $options['conditions']['User.activation_code'] = $code;
         $User = $this->User->find('first', $options);
         if( isset($User['User']['id']) ) {
-
-            $this->User->id = $User['User']['id'];
-            $this->data['User']['activation_code'] = null;
-            if ($this->User->save($this->data)) {            
+            
+            $this->User->validate = false;
+            $this->User->id                  = $User['User']['id'];
+            $data['User']['id']              = $User['User']['id'];
+            $data['User']['activation_code'] = null;
+            if ($this->User->save($data)) {   
                 $this->Session->setFlash(__('Verificação realizada com sucesso!', true));               
-            }    
+            } else {
+                $this->Session->setFlash(__('Erro ao ativar o cadastro! Tente novamente.', true));
+            }   
             
         } else {
             $this->Session->setFlash(__('Cadastro já verificado ou inexistente.', true));
         }
         $this->redirect(array('action' => 'login'));  
+        
     }       
 
     function remember_password() {

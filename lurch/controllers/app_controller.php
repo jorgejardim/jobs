@@ -216,9 +216,9 @@ class AppController extends Controller {
         */
         if($_SERVER['HTTP_HOST']=='localhostXXX') {
             // Libera acesso para localhost
-            $this->AclCaching->forceAllow();
+            ///$this->AclCaching->forceAllow();
             if(!USER_ID && $this->params['controller']!='users') {
-                $this->redirect(array('controller' => 'users', 'action' => 'login', 'admin' => false));
+            //    $this->redirect(array('controller' => 'users', 'action' => 'login', 'admin' => false));
             }
         } elseif (isset($this->params['admin'])) {
             // Libera acesso para actions com o prefixo admin
