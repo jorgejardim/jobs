@@ -29,16 +29,16 @@ class AppController extends Controller {
                 'foreignKey'   => 'group_id'
             )
         ),
-        'Email' => array('from' => 'Contato <jorge.testes@gmail.com>',
-                'sendAs' => 'html',
-                'delivery' => 'smtp',
-                'smtpOptions' => array(
-                    'timeout'  => '30',
-                    'port'     => '465',
-                    'host'     => 'ssl://smtp.gmail.com',
-                    'username' => 'jorge.testes@gmail.com',
-                    'password' => 'jfjt4r5z',                                                
-                )),
+                'Email' => array('from' => 'PetCare <vetwecare@petcare.com.br>',
+                		'sendAs' => 'both',
+                		'delivery' => 'smtp',
+                		'smtpOptions' => array(
+                				'timeout'  => '30',
+                				'port'     => '465',
+                				'host'     => 'ssl://s8-dallas.accountservergroup.com',
+                				'username' => 'suporte@festaonline.net',
+                				'password' => 't4r5zjj',
+                		)),                
         'Enum',
         'Commons',
         'Functions',

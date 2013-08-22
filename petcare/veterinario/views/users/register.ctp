@@ -5,7 +5,8 @@
         <?php
             echo $this->Form->create(array('action' => 'register'));    
             echo $this->Form->input('name', array('label' => 'Nome'));
-            echo $this->Form->input('UsersData.crmv', array('label' => 'CRMV'));
+            echo $this->Form->input('UsersData.crmv', array('label' => 'CRMV', 'placeholder' => 'Exemplo: sp-0000'));
+            echo $this->Form->input('UsersData.cpf', array('class'=>'cpf', 'type'=>'text', 'label'=>'CPF'));
             echo $this->Form->input('UsersData.clinica', array('label' => 'Clínica'));                       
             echo $this->Form->input('email', array('label' => 'E-mail'));             
             echo $this->Form->input('UsersData.birth', array('class'=>'data', 'type'=>'text', 'label'=>'Aniversário'));

@@ -5,7 +5,7 @@
                                 <th><?php echo $this->Paginator->sort(__('Evento', true), 'event_id');?></th>
                                 <th><?php echo $this->Paginator->sort(__('Usuário', true), 'user_id');?></th>
                                 <th><?php echo $this->Paginator->sort(__('Como soube?', true), 'how_did');?></th>
-                                <th><?php echo $this->Paginator->sort(__('Created', true), 'created');?></th>
+                                <th><?php echo $this->Paginator->sort(__('Data Inscrição', true), 'created');?></th>
                         <th class="actions"><?php __('Actions');?></th>
         </tr>
         <?php

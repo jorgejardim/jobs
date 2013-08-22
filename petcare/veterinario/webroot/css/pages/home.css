@@ -3,7 +3,7 @@
     vertical-align: top;
 }
 .mensagem, .selecione-instituicao {
-    border: 1px solid #3E9FC9;
+    border: 1px solid #14A79D;
     border-radius: 5px 5px 5px 5px;
     display: inline-block;
     margin-bottom: 20px;
@@ -20,6 +20,7 @@ legend {
 .mensagem legend, .selecione-instituicao legend {
     background-color: #006790;
     background-position: center center;
+    background-image: url("../../img/speciality-title.png");
     border-radius: 5px 5px 5px 5px;
     color: #FFFFFF;
     font-size: 14px;

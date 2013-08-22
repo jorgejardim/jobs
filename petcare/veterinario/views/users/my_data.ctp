@@ -1,7 +1,7 @@
 <div class="users div-centro">
     <?php echo $this->Form->create('User', array('type' => 'file', 'url' => '/'.$this->params['url']['url'])); ?>
     <fieldset>
-        <legend>Meus Dados</legend>
+		<legend>Meus Dados</legend>
         <?php
         echo $this->Form->input('name');
         echo $this->Form->input('email', array('label'=>'E-mail'));
@@ -11,6 +11,7 @@
         <legend>Informações Pessoais</legend>
         <?php
         echo $this->Form->input('UsersData.crmv', array('label' => 'CRMV'));
+        echo $this->Form->input('UsersData.cpf', array('class'=>'cpf', 'type'=>'text', 'label'=>'CPF'));        
 	echo $this->Form->input('UsersData.clinica', array('label' => 'Clínica'));                       
 	echo $this->Form->input('UsersData.birth', array('class'=>'data', 'type'=>'text', 'label'=>'Aniversário')); 
 	echo $this->Form->input('UsersPhone.number.R', array(

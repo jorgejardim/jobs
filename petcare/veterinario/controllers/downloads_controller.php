@@ -29,6 +29,8 @@ class DownloadsController extends AppController {
             $this->Download->create();
             if ($this->Download->save($this->data)) {
                 
+            	$this->data['Download']['file'] = substr($this->data['Download']['file'], 0, -4);
+            	
                 $upload = $this->_download($this->data['Download']['file']);
                 if ($upload!='ok') {
                     $this->Session->setFlash(__($upload, true));

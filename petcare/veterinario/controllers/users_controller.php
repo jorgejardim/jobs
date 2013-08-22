@@ -302,6 +302,12 @@ class UsersController extends AppController {
                     'message' => 'Digite um valor válido.',
                 ),
             ),
+        	'cpf' => array(
+        			'notempty' => array(
+        					'rule' => array('notempty'),
+        					'message' => 'Digite um CPF válido.',
+        			),
+        	),
         ); 
         $this->loadModel('UsersData');
         $this->UsersData->validate = array_merge($this->UsersData->validate, $validate);
@@ -345,9 +351,9 @@ class UsersController extends AppController {
                 $this->set('name', $this->data['User']['name']); 
                 $this->set('email', $this->data['User']['email']);
                 $this->set('code', $code); 
-                $this->Email->send();
+                $send = $this->Email->send();
 
-                $this->set('ok', true);  
+                $this->set('ok', true); 
             }
         }
         
