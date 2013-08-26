@@ -7,6 +7,7 @@
         echo $this->Form->input('detalhes', array('type'=>'textarea','placeholder'=>'Adicione mais informações sobre o evento.', 'class'=>'ckeditor'));
         echo $this->Form->input('inicio', array('type'=>'text', 'class'=>'datatime','placeholder'=>'Data de início'));
         echo $this->Form->input('termino', array('type'=>'text', 'class'=>'datatime','placeholder'=>'Data de término'));        
+        echo $this->Form->input('rsvp', array('options'=>array('1'=>'Sim', '0'=>'Não'), 'label'=>'RSVP'));
         ?>
         <legend>Local do Evento</legend>
         <?php

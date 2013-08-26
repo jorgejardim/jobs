@@ -118,6 +118,7 @@
                         array('alt' => 'wope slider', 
                                 'class' => 'ws1',
                                 'style' => 'easing:easeOutExpo;delay:0;time:10000;action:faderight',
+								//'url' => array('controller' => 'users', 'action' => 'register', 'admin'=>false)
                             )); 
                 ?>
                 </div>
@@ -126,6 +127,7 @@
                         array('alt' => 'wope slider', 
                                 'class' => 'ws1',
                                 'style' => 'easing:easeOutExpo;delay:0;time:10000;action:faderight',
+								//'url' => array('controller' => 'users', 'action' => 'register', 'admin'=>false)
                             )); 
                 ?>
                 </div>
@@ -134,12 +136,17 @@
                         array('alt' => 'wope slider', 
                                 'class' => 'ws1',
                                 'style' => 'easing:easeOutExpo;delay:0;time:10000;action:faderight',
+								//'url' => array('controller' => 'users', 'action' => 'register', 'admin'=>false)
                             )); 
                 ?>
                 </div>
             </div>
             </div>
             <input type="hidden" name="hiddenField" id="hiddenField">
+            <?php echo $this->Html->link('cadastre-se',                         
+						array('controller' => 'users', 'action' => 'register', 'admin'=>false),
+            			array('class' => 'slide-home-a')); 
+            ?>
         </div>
         </div>
         <!-- End Wope Slider-->  

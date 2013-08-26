@@ -293,28 +293,39 @@ class UsersController extends AppController {
         $this->set('css_for_layout', 'pages/users_login');
         
         if (!empty($this->data)) {
+        	
+        	//verifica se o email ja existe
+        	$options = array();
+        	$options['conditions']['User.email'] = $this->data['User']['email'];
+        	$data = $this->User->find('first', $options);
+        	
+        	if(!isset($data['User']['email'])) {
             
-            //salva usuario
-            $code = md5(uniqid(rand(), true));
-            $this->data['User']['group_id'] = 3;
-            $this->data['User']['activation_code'] = $code;
-            $salvar = $this->save($this->data);
-            if($salvar) {
-                
-                //envia email
-                $this->Email->to = $this->data['User']['email'];
-                $this->Email->subject = 'Finalizar cadastro';
-                $this->Email->template = 'activation_code'; 
-                $this->set('name', $this->data['User']['name']); 
-                $this->set('email', $this->data['User']['email']);
-                $this->set('code', $code); 
-                $this->Email->send();
-
-                $this->set('ok', true); 
-                
-            } else {
-                $this->Session->setFlash('O registro não pôde ser salvo. Por favor, tente novamente.');
-            }
+	            //salva usuario
+	            $code = md5(uniqid(rand(), true));
+	            $this->data['User']['group_id'] = 3;
+	            $this->data['User']['activation_code'] = $code;
+	            $salvar = $this->save($this->data);
+	            if($salvar) {
+	                
+	                //envia email
+	                $this->Email->to = $this->data['User']['email'];
+	                $this->Email->subject = 'Finalizar cadastro';
+	                $this->Email->template = 'activation_code'; 
+	                $this->set('name', $this->data['User']['name']); 
+	                $this->set('email', $this->data['User']['email']);
+	                $this->set('code', $code); 
+	                $this->Email->send();
+	
+	                $this->set('ok', true); 
+	                
+	            } else {
+	                $this->Session->setFlash('O registro não pôde ser salvo. Por favor, tente novamente.');
+	            }
+	            
+        	} else {
+        		$this->Session->setFlash('Erro: O e-mail digitado já existe.');
+        	}
         }
         
         $this->set('ok', @$salvar);
