@@ -4,6 +4,8 @@ class ConfigsController extends AppController {
 	var $name = 'Configs';
 
 	function admin_index() {
+		
+		$id = 1;
 
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid', true).' '.__('Config', true));

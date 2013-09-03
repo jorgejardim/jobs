@@ -35,7 +35,7 @@
  */
         if(isset($_SERVER['HTTP_HOST'])) {
             if($_SERVER['HTTP_HOST']=='localhost' ||
-               $_SERVER['REMOTE_ADDR']=='189.33.207.40') {
+               $_SERVER['REMOTE_ADDR']=='187.37.139.232') {
                 Configure::write('debug', 2);
             } else {
                 Configure::write('debug', 0);
@@ -319,3 +319,5 @@
  * to fix the date & time related errors.
  */        
         date_default_timezone_set('America/Sao_Paulo');
+        
+        session_save_path("/home/users/web/b1560/moo.nteos/cgi-bin/tmp");       

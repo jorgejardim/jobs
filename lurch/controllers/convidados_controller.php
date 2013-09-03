@@ -36,10 +36,32 @@ class ConvidadosController extends AppController {
         $evento = $this->Convidado->Evento->read(null, $evento_id);
         $this->set(compact('evento'));
         $this->set('title_for_layout', 'Incluir Convidado');
-        $this->data['Convidado']['evento_id'] = $evento_id;
+        $this->data['Convidado']['evento_id'] = $evento_id;        
+        
+        //limite de convidados
+        $this->loadModel('Config');
+        $options = false;
+        $options['conditions']['Config.var'] = 'limite_convidados';
+        $config = $this->Config->find('first', $options);
+        $limite_convidados = $config['Config']['value'];
+        
+        $options = false;
+        $options['conditions']['Convidado.evento_id']  = $evento_id;
+        $total_convidados = $this->Convidado->find('count', $options);
+        if($total_convidados>$limite_convidados) {
+        	//deleta convidados excessivos
+        	$excluir = $total_convidados-$limite_convidados;
+        	$this->Convidado->query("DELETE FROM `convidados` 
+        							 WHERE `evento_id` = ".$evento_id."
+        						     ORDER BY `id` DESC
+        							 LIMIT ".$excluir);
+        	$this->Session->setFlash('Erro: Não é permitido ultrapassar o limite de '.$limite_convidados.' convidados.');
+        }
         
         //lista
         $this->Convidado->recursive = 0;
+        $this->paginate['conditions'] = array('Convidado.evento_id'=>$evento_id);
+        $this->paginate['order'] = array('Convidado.id');
         $this->paginate['limit'] = 1000;
         $convidados = $this->paginate();
         $this->set('convidados', $convidados);

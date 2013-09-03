@@ -16,6 +16,16 @@ class HomeController extends AppController {
     * @access public
     */
     function index() {
-
+		
+    	if(GROUP_REFERENCE == 'usuario') {
+    		
+    		$this->loadModel('Event');
+    		$this->Event->recursive = 0;
+    		$events = $this->paginate();    		
+    		$this->set('events', $events);    		
+    		
+    	} else {
+    		
+    	}
     }
 }
