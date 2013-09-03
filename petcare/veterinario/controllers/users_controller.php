@@ -55,6 +55,9 @@ class UsersController extends AppController {
 
     function admin_index() {
         $this->User->recursive = 0;
+        if(GROUP_REFERENCE != 'root') {
+        	$this->paginate['conditions']['User.group_id !='] = 1;
+        }
         $this->users = $this->paginate();
         $this->set('users', $this->users);
     }

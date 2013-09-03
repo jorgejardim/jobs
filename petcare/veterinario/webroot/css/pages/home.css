@@ -10,7 +10,7 @@
     padding: 16px;
     text-align: left;
     vertical-align: top;
-    width: 400px;
+    width: 800px;
 }
 legend {
     color: #EE3322;
@@ -18,9 +18,8 @@ legend {
     font-weight: bold;
 }
 .mensagem legend, .selecione-instituicao legend {
-    background-color: #006790;
+    background-color: #19AEA4;
     background-position: center center;
-    background-image: url("../../img/speciality-title.png");
     border-radius: 5px 5px 5px 5px;
     color: #FFFFFF;
     font-size: 14px;
@@ -45,4 +44,39 @@ legend {
 }
 .mensagem form div, .selecione-instituicao form div {
     margin-bottom: 0;
+}
+table.ultimos-eventos {
+    margin: -10px;
+    width: 820px;	
+}
+table.ultimos-eventos th {
+	
+}
+table.ultimos-eventos th.titulo {
+	
+}
+table.ultimos-eventos td {
+	
+}
+table.ultimos-eventos td a {
+	
+}
+table.ultimos-eventos td.ver-todos {
+    text-align: right;	
+}
+
+table.ultimos-inscritos {
+    margin: -10px;
+    width: 820px;
+}
+table.ultimos-inscritos th {
+}
+table.ultimos-inscritos th.titulo {
+}
+table.ultimos-inscritos td {
+}
+table.ultimos-inscritos td a {
+}
+table.ultimos-inscritos td.ver-todos {
+    text-align: right;
 }
